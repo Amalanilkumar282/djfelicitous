@@ -17,6 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://djfelicitous.com'),
   title: "DJ Felicitous | Multi-Genre DJ & Producer",
   description: "Experience the electrifying world of DJ Felicitous - from underground techno to vibrant Bollywood beats. Book now for unforgettable performances.",
   keywords: "DJ, electronic music, techno, bollywood, psytrance, music producer, nightclub, festivals",

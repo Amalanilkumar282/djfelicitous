@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Play, 
@@ -38,6 +38,11 @@ export default function MusicPlayer({ tracks, title, className = '' }: MusicPlay
   
   const audioRef = useRef<HTMLAudioElement>(null);
 
+  const handleNext = useCallback(() => {
+    setCurrentTrack(prev => prev === tracks.length - 1 ? 0 : prev + 1);
+    setIsPlaying(false);
+  }, [tracks.length]);
+
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -54,7 +59,7 @@ export default function MusicPlayer({ tracks, title, className = '' }: MusicPlay
       audio.removeEventListener('loadedmetadata', updateDuration);
       audio.removeEventListener('ended', handleNext);
     };
-  }, []);
+  }, [handleNext]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -77,11 +82,6 @@ export default function MusicPlayer({ tracks, title, className = '' }: MusicPlay
 
   const handlePrevious = () => {
     setCurrentTrack(prev => prev === 0 ? tracks.length - 1 : prev - 1);
-    setIsPlaying(false);
-  };
-
-  const handleNext = () => {
-    setCurrentTrack(prev => prev === tracks.length - 1 ? 0 : prev + 1);
     setIsPlaying(false);
   };
 

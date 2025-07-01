@@ -1,39 +1,39 @@
 'use client';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Star, ExternalLink, Volume2, Music, Image as ImageIcon } from 'lucide-react';
+import { Calendar, MapPin, Star, ExternalLink, Volume2 } from 'lucide-react';
 import { djProfiles } from '@/data/djProfiles';
 import { placeholderImages } from '@/utils/placeholders';
 import Link from 'next/link';
 import Image from 'next/image';
-import BookingModal from '@/components/BookingModal';
-import ImageGallery from '@/components/ImageGallery';
-import MusicPlayer from '@/components/MusicPlayer';
+// import BookingModal from '@/components/BookingModal';
+// import ImageGallery from '@/components/ImageGallery';
+// import MusicPlayer from '@/components/MusicPlayer';
 
 const TechnoPage = () => {
   const profile = djProfiles.find(dj => dj.id === 'techno')!;
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
+//   const [ setIsBookingOpen] = useState(false);
 
   // Sample gallery images
-  const galleryImages = [
-    { src: placeholderImages.gallery.techno1, alt: 'Techno performance at underground club', caption: 'Underground Vibes' },
-    { src: placeholderImages.gallery.techno2, alt: 'DJ Nexus at festival main stage', caption: 'Festival Main Stage' },
-    { src: placeholderImages.gallery.techno3, alt: 'Late night techno session', caption: 'After Hours' },
-    { src: placeholderImages.gallery.techno4, alt: 'Industrial warehouse rave', caption: 'Warehouse Rave' },
-    { src: placeholderImages.gallery.techno5, alt: 'Techno crowd dancing', caption: 'United by Bass' },
-    { src: placeholderImages.gallery.techno6, alt: 'DJ equipment close-up', caption: 'Tools of the Trade' },
-  ];
+//   const galleryImages = [
+//     { src: placeholderImages.gallery.techno1, alt: 'Techno performance at underground club', caption: 'Underground Vibes' },
+//     { src: placeholderImages.gallery.techno2, alt: 'DJ Nexus at festival main stage', caption: 'Festival Main Stage' },
+//     { src: placeholderImages.gallery.techno3, alt: 'Late night techno session', caption: 'After Hours' },
+//     { src: placeholderImages.gallery.techno4, alt: 'Industrial warehouse rave', caption: 'Warehouse Rave' },
+//     { src: placeholderImages.gallery.techno5, alt: 'Techno crowd dancing', caption: 'United by Bass' },
+//     { src: placeholderImages.gallery.techno6, alt: 'DJ equipment close-up', caption: 'Tools of the Trade' },
+//   ];
 
   // Sample playlist
-  const playlist = [
-    { id: '1', title: 'Industrial Revolution', duration: '7:45', spotifyUrl: '#', soundcloudUrl: '#' },
-    { id: '2', title: 'Neon Underground', duration: '6:32', spotifyUrl: '#', soundcloudUrl: '#' },
-    { id: '3', title: 'Cyber Dreams', duration: '8:15', spotifyUrl: '#', soundcloudUrl: '#' },
-    { id: '4', title: 'Electric Pulse', duration: '7:23', spotifyUrl: '#', soundcloudUrl: '#' },
-    { id: '5', title: 'Digital Warfare', duration: '9:11', spotifyUrl: '#', soundcloudUrl: '#' },
-    { id: '6', title: 'Synthetic Reality', duration: '6:48', spotifyUrl: '#', soundcloudUrl: '#' },
-  ];
+//   const playlist = [
+//     { id: '1', title: 'Industrial Revolution', duration: '7:45', spotifyUrl: '#', soundcloudUrl: '#' },
+//     { id: '2', title: 'Neon Underground', duration: '6:32', spotifyUrl: '#', soundcloudUrl: '#' },
+//     { id: '3', title: 'Cyber Dreams', duration: '8:15', spotifyUrl: '#', soundcloudUrl: '#' },
+//     { id: '4', title: 'Electric Pulse', duration: '7:23', spotifyUrl: '#', soundcloudUrl: '#' },
+//     { id: '5', title: 'Digital Warfare', duration: '9:11', spotifyUrl: '#', soundcloudUrl: '#' },
+//     { id: '6', title: 'Synthetic Reality', duration: '6:48', spotifyUrl: '#', soundcloudUrl: '#' },
+//   ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
