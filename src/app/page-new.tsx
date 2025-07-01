@@ -1,19 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
+import HeroSection from '@/components/HeroSection';
+import DJCardGrid from '@/components/DJCardGrid';
 import { djProfiles } from '@/data/djProfiles';
-
-// Dynamically import components to avoid SSR issues
-const HeroSection = dynamic(() => import('@/components/HeroSection'), {
-  ssr: false,
-  loading: () => <div className="min-h-screen flex items-center justify-center"><div className="text-white">Loading...</div></div>
-});
-
-const DJCardGrid = dynamic(() => import('../components/DJCardGrid'), {
-  ssr: false,
-  loading: () => <div className="grid gap-8"><div className="bg-gray-800 rounded-lg h-64 animate-pulse"></div></div>
-});
 
 export default function Home() {
   return (
@@ -55,10 +45,28 @@ export default function Home() {
         
         {/* Background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Static background elements */}
-          <div className="absolute w-2 h-2 bg-[var(--neon-cyan)] rounded-full opacity-30 top-1/4 left-1/4 animate-pulse" />
-          <div className="absolute w-2 h-2 bg-[var(--neon-magenta)] rounded-full opacity-20 top-3/4 right-1/4 animate-pulse" />
-          <div className="absolute w-2 h-2 bg-[var(--neon-lime)] rounded-full opacity-40 top-1/2 left-3/4 animate-pulse" />
+          {/* Floating particles */}
+          {Array.from({ length: 20 }).map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-[var(--neon-cyan)] rounded-full opacity-30"
+              animate={{
+                x: [0, 100, 0],
+                y: [0, -100, 0],
+                opacity: [0.3, 0.8, 0.3],
+              }}
+              transition={{
+                duration: 8 + Math.random() * 4,
+                repeat: Infinity,
+                ease: 'easeInOut',
+                delay: Math.random() * 2,
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
         </div>
       </section>
 
