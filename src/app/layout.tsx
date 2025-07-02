@@ -1,19 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Orbitron, Inter } from 'next/font/google';
+import { Inter, Space_Grotesk } from 'next/font/google';
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "../components/Footer";
-import FaviconGenerator from "@/components/FaviconGenerator";
-
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['400', '700', '900'],
-  variable: '--font-orbitron'
-});
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter'
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-space-grotesk'
 });
 
 export const metadata: Metadata = {
@@ -73,8 +72,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`bg-black text-white overflow-x-hidden ${orbitron.variable} ${inter.variable}`}>
-        <FaviconGenerator />
+      <body className={`overflow-x-hidden ${spaceGrotesk.variable} ${inter.variable}`}>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">

@@ -1,14 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import DJCard from '././DJCard';
+import DJCard from './DJCard';
 import { DJProfile } from '@/data/djProfiles';
 
 interface DJCardGridProps {
   profiles: DJProfile[];
 }
 
-const DJCardGrid = ({ profiles }: DJCardGridProps) => {
+const DJCardGrid: React.FC<DJCardGridProps> = ({ profiles }) => {
   // Separate featured and regular profiles
   const featuredProfile = profiles.find(profile => profile.featured);
   const regularProfiles = profiles.filter(profile => !profile.featured);
@@ -34,8 +34,8 @@ const DJCardGrid = ({ profiles }: DJCardGridProps) => {
             key={profile.id}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.6, 
+            transition={{
+              duration: 0.6,
               delay: 0.4 + (index * 0.1),
             }}
           >
