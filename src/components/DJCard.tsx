@@ -17,14 +17,14 @@ const DJCard: React.FC<DJCardProps> = ({ profile, featured = false }) => {
     <motion.div
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-      className={`card-executive group cursor-pointer ${
-        featured ? 'min-h-[500px]' : 'min-h-[400px]'
+      className={`card-executive group cursor-pointer w-full ${
+        featured ? 'min-h-[600px] max-w-4xl mx-auto' : 'min-h-[450px]'
       }`}
     >
       <Link href={profile.route}>
         {/* Image Container */}
         <div className={`relative overflow-hidden ${
-          featured ? 'h-64' : 'h-48'
+          featured ? 'h-80' : 'h-56'
         } rounded-t-xl`}>
           <Image
             src={(placeholderImages[profile.id as keyof typeof placeholderImages] as string) || profile.image || '/placeholder.jpg'}
@@ -63,29 +63,31 @@ const DJCard: React.FC<DJCardProps> = ({ profile, featured = false }) => {
         </div>
 
         {/* Content */}
-        <div className={`p-6 ${featured ? 'space-y-4' : 'space-y-3'}`}>
+        <div className={`p-6 ${featured ? 'space-y-6' : 'space-y-4'}`}>
           {/* Header */}
-          <div className="space-y-2">
+          <div className="space-y-3">
             <h3 className={`font-space-grotesk font-bold text-primary group-hover:text-accent-primary transition-colors ${
-              featured ? 'text-2xl' : 'text-xl'
+              featured ? 'text-3xl' : 'text-xl'
             }`}>
               {profile.name}
             </h3>
-            <p className="text-accent-primary text-sm font-medium mb-2">
+            <p className={`text-accent-primary font-medium ${
+              featured ? 'text-lg' : 'text-sm'
+            }`}>
               {profile.subtitle}
             </p>
             <p className={`text-secondary leading-relaxed ${
-              featured ? 'text-base' : 'text-sm'
+              featured ? 'text-lg' : 'text-sm'
             } line-clamp-3`}>
               {profile.description}
             </p>
           </div>
 
           {/* Stats */}
-          <div className="flex items-center justify-between pt-2 text-muted text-xs">
+          <div className="flex items-center justify-between pt-3 text-muted text-sm">
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-1">
-                <Music className="w-3 h-3" />
+                <Music className="w-4 h-4" />
                 <span>{profile.gigs?.length || 5}+ Events</span>
               </div>
               <div className="flex items-center space-x-1">
@@ -101,7 +103,7 @@ const DJCard: React.FC<DJCardProps> = ({ profile, featured = false }) => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className={`btn-executive w-full justify-center ${
-                featured ? 'py-3' : 'py-2'
+                featured ? 'py-4 text-lg' : 'py-3'
               }`}
             >
               <span>Discover Project</span>

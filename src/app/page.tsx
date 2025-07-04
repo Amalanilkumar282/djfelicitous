@@ -34,13 +34,13 @@ export default function Home() {
 
       {/* Executive DJ Projects Section */}
       <section className="section bg-platinum">
-        <div className="section-container">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Executive Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="section-header"
+            className="text-center mb-16"
           >
             <h2 className="section-title">
               Musical <span className="text-accent">Identities</span>

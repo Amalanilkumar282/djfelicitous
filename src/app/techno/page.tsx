@@ -1,19 +1,14 @@
 'use client';
 
-// import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Star, ExternalLink, Volume2 } from 'lucide-react';
 import { djProfiles } from '@/data/djProfiles';
 import { placeholderImages } from '@/utils/placeholders';
 import Link from 'next/link';
 import Image from 'next/image';
-// import BookingModal from '@/components/BookingModal';
-// import ImageGallery from '@/components/ImageGallery';
-// import MusicPlayer from '@/components/MusicPlayer';
 
 const TechnoPage = () => {
   const profile = djProfiles.find(dj => dj.id === 'techno')!;
-//   const [ setIsBookingOpen] = useState(false);
 
   // Sample gallery images
 //   const galleryImages = [

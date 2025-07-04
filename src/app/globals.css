@@ -497,6 +497,17 @@
   z-index: 1;
 }
 
+.techno-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.2;
+  z-index: 1;
+}
+
 /* Section Styling */
 .section {
   padding: var(--space-5xl) 0;
