@@ -8,10 +8,10 @@ import { djProfiles } from '../data/djProfiles';
 const HeroSection = dynamic(() => import('../components/HeroSection').then(mod => ({ default: mod.default })), {
   ssr: false,
   loading: () => (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+    <div className="min-h-screen flex items-center justify-center bg-executive">
       <div className="text-center space-y-4">
-        <div className="w-12 h-12 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto"></div>
-        <div className="text-gray-400">Loading Experience...</div>
+        <div className="w-12 h-12 border-2 border-accent border-t-transparent rounded-full animate-spin mx-auto"></div>
+        <div className="text-steel">Loading Executive Experience...</div>
       </div>
     </div>
   )
@@ -21,32 +21,32 @@ const DJCardGrid = dynamic(() => import('../components/DJCardGrid').then(mod => 
   ssr: false,
   loading: () => (
     <div className="grid gap-8">
-      <div className="bg-gray-800 rounded-lg h-64 animate-pulse"></div>
+      <div className="bg-steel rounded-xl h-64 animate-pulse"></div>
     </div>
   )
 });
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-executive">
       {/* Hero Section */}
       <HeroSection />
 
-      {/* DJ Projects Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
+      {/* Executive DJ Projects Section */}
+      <section className="section bg-platinum">
+        <div className="section-container">
+          {/* Executive Section Header */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6 }}
+            className="section-header"
           >
-            <h2 className="font-space-grotesk text-4xl md:text-5xl font-bold mb-6 text-white">
-              Musical <span className="text-cyan-400">Identities</span>
+            <h2 className="section-title">
+              Musical <span className="text-accent">Identities</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Explore diverse sonic landscapes across multiple genres and projects
+            <p className="section-subtitle">
+              Explore diverse sonic landscapes across multiple genres and professional projects
             </p>
 
             {/* Professional divider */}

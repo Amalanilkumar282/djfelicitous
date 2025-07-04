@@ -15,7 +15,7 @@ export default function CoupleduoPage() {
   }
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 bg-executive-platinum">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background */}
@@ -27,34 +27,30 @@ export default function CoupleduoPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-executive-charcoal/80 via-executive-charcoal/30 to-transparent" />
         </div>
 
-        {/* Floating Hearts */}
+        {/* Professional Accent Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {Array.from({ length: 15 }).map((_, i) => (
+          {Array.from({ length: 5 }).map((_, i) => (
             <motion.div
               key={i}
-              className="absolute text-neon-pink opacity-30"
+              className="absolute w-2 h-2 bg-executive-teal rounded-full opacity-20"
               animate={{
-                y: [0, -100, 0],
-                x: [0, 50, 0],
-                rotate: [0, 360],
-                opacity: [0.1, 0.6, 0.1],
+                y: [0, -50, 0],
+                opacity: [0.1, 0.3, 0.1],
               }}
               transition={{
-                duration: 8 + Math.random() * 4,
+                duration: 6 + Math.random() * 2,
                 repeat: Infinity,
                 ease: 'easeInOut',
-                delay: Math.random() * 3,
+                delay: Math.random() * 2,
               }}
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
               }}
-            >
-              ♥
-            </motion.div>
+            />
           ))}
         </div>
 
@@ -65,13 +61,13 @@ export default function CoupleduoPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="font-orbitron text-5xl md:text-7xl font-black mb-6 neon-pink neon-text">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white">
               {profile.name}
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
+            <p className="text-2xl md:text-3xl text-executive-silver mb-8 font-light">
               {profile.subtitle}
             </p>
-            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-xl text-executive-chrome mb-12 max-w-2xl mx-auto">
               {profile.description}
             </p>
             
@@ -79,7 +75,7 @@ export default function CoupleduoPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-neon-pink to-neon-magenta text-black font-bold text-lg px-8 py-4 rounded-full hover:animate-pulse-glow transition-all"
+                className="bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold text-lg px-8 py-4 rounded-lg shadow-executive-medium hover:shadow-executive-glow transition-all"
               >
                 <span className="flex items-center space-x-2">
                   <Play size={20} />
@@ -90,7 +86,7 @@ export default function CoupleduoPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-neon-pink text-neon-pink font-bold text-lg px-8 py-4 rounded-full hover:bg-neon-pink hover:text-black transition-all"
+                className="border-2 border-executive-teal text-executive-teal font-bold text-lg px-8 py-4 rounded-lg hover:bg-executive-teal/10 transition-all shadow-executive-subtle"
               >
                 BOOK THE DUO
               </motion.button>

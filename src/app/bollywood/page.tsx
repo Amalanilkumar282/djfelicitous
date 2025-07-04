@@ -30,7 +30,7 @@ const BollywoodPage = () => {
     },
   };
 
-  const glitchVariants = {
+  const executiveVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: { 
       opacity: 1, 
@@ -39,30 +39,13 @@ const BollywoodPage = () => {
         duration: 0.8
       }
     },
-    glitch: {
-      x: [0, -2, 2, -1, 1, 0],
-      textShadow: [
-        "0 0 0 transparent",
-        "-2px 0 #ff00ff, 2px 0 #00ffff",
-        "2px 0 #ff00ff, -2px 0 #00ffff", 
-        "-1px 0 #ff00ff, 1px 0 #00ffff",
-        "1px 0 #ff00ff, -1px 0 #00ffff",
-        "0 0 0 transparent"
-      ],
-      transition: { 
-        duration: 0.3,
-        repeat: Infinity,
-        repeatDelay: 3
-      }
-    }
   };
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Animated Background */}
+    <div className="min-h-screen bg-executive-platinum overflow-hidden">
+      {/* Executive Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/10 to-orange-900/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,255,0.1)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-executive-teal/5 via-executive-chrome/5 to-executive-accent/5" />
         <motion.div
           className="absolute inset-0"
           animate={{
@@ -87,14 +70,14 @@ const BollywoodPage = () => {
           {/* Hero Content */}
           <motion.div variants={itemVariants} className="text-center lg:text-left">
             <motion.h1
-              className="text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-orange-400 bg-clip-text text-transparent"
-              variants={glitchVariants}
-              animate="glitch"
+              className="text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-executive-teal via-executive-accent to-executive-teal-light bg-clip-text text-transparent"
+              variants={executiveVariants}
+              animate="visible"
             >
               DJ FELICITOUS
             </motion.h1>
             <motion.p
-              className="text-2xl lg:text-3xl mb-6 text-pink-300 font-light"
+              className="text-2xl lg:text-3xl mb-6 text-executive-slate font-light"
               variants={itemVariants}
             >
               {profile.subtitle}
@@ -103,7 +86,7 @@ const BollywoodPage = () => {
               className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start"
               variants={itemVariants}
             >
-              <span className="px-4 py-2 bg-gradient-to-r from-pink-500/20 to-orange-500/20 border border-pink-400/30 rounded-full text-pink-300 font-medium backdrop-blur-sm">
+              <span className="px-4 py-2 bg-executive-teal/10 border border-executive-teal/30 rounded-full text-executive-teal font-medium backdrop-blur-sm shadow-executive-subtle">
                 {profile.genre}
               </span>
             </motion.div>
@@ -111,10 +94,10 @@ const BollywoodPage = () => {
               className="flex gap-4 justify-center lg:justify-start"
               variants={itemVariants}
             >
-              <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-orange-500 text-white font-bold rounded-lg neon-glow hover:scale-105 transition-transform duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold rounded-lg shadow-executive-medium hover:scale-105 transition-transform duration-300 hover:shadow-executive-glow">
                 Book Now
               </button>
-              <button className="px-8 py-4 border-2 border-pink-400 text-pink-400 font-bold rounded-lg hover:bg-pink-400/10 transition-colors duration-300">
+              <button className="px-8 py-4 border-2 border-executive-teal text-executive-teal font-bold rounded-lg hover:bg-executive-teal/10 transition-colors duration-300 shadow-executive-subtle">
                 View Mixes
               </button>
             </motion.div>
@@ -126,14 +109,14 @@ const BollywoodPage = () => {
             className="relative"
           >
             <div className="relative w-full aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full blur-3xl opacity-30 animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-executive-teal to-executive-teal-light rounded-full blur-3xl opacity-20 animate-executive-pulse" />
               <Image
                 src={placeholderImages.bollywood}
                 alt="DJ Felicitous"
                 fill
-                className="rounded-full border-4 border-pink-400/50 object-cover relative z-10"
+                className="rounded-full border-4 border-executive-teal/50 object-cover relative z-10 shadow-executive-strong"
               />
-              <div className="absolute inset-0 rounded-full border-4 border-pink-400 animate-spin-slow opacity-50" />
+              <div className="absolute inset-0 rounded-full border-4 border-executive-teal animate-executive-float opacity-50" />
             </div>
           </motion.div>
         </div>
@@ -149,13 +132,13 @@ const BollywoodPage = () => {
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-8 text-pink-400"
+            className="text-4xl lg:text-6xl font-bold mb-8 text-executive-teal"
             variants={itemVariants}
           >
             About the Artist
           </motion.h2>
           <motion.p
-            className="text-lg text-gray-300 leading-relaxed mb-8"
+            className="text-lg text-executive-slate leading-relaxed mb-8"
             variants={itemVariants}
           >
             {profile.bio}
@@ -165,16 +148,16 @@ const BollywoodPage = () => {
             variants={itemVariants}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">5+</div>
-              <div className="text-gray-400">Years Experience</div>
+              <div className="text-3xl font-bold text-executive-teal mb-2">5+</div>
+              <div className="text-executive-chrome-dark">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">100+</div>
-              <div className="text-gray-400">Events Played</div>
+              <div className="text-3xl font-bold text-executive-accent mb-2">100+</div>
+              <div className="text-executive-chrome-dark">Events Played</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">50K+</div>
-              <div className="text-gray-400">Happy Dancers</div>
+              <div className="text-3xl font-bold text-executive-teal-light mb-2">50K+</div>
+              <div className="text-executive-chrome-dark">Happy Dancers</div>
             </div>
           </motion.div>
         </div>
@@ -190,7 +173,7 @@ const BollywoodPage = () => {
       >
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-pink-400"
+            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-executive-teal"
             variants={itemVariants}
           >
             Gallery
@@ -202,7 +185,7 @@ const BollywoodPage = () => {
             {profile.gallery.map((image, index) => (
               <motion.div
                 key={index}
-                className="relative aspect-square rounded-lg overflow-hidden group cursor-pointer"
+                className="relative aspect-square rounded-lg overflow-hidden group cursor-pointer shadow-executive-medium hover:shadow-executive-strong transition-shadow duration-300"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
@@ -213,7 +196,7 @@ const BollywoodPage = () => {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-pink-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-executive-teal/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </motion.div>
             ))}
           </motion.div>
@@ -230,7 +213,7 @@ const BollywoodPage = () => {
       >
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-pink-400"
+            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-executive-teal"
             variants={itemVariants}
           >
             Recent Shows
@@ -239,29 +222,29 @@ const BollywoodPage = () => {
             {profile.gigs.slice(0, 6).map((gig, index) => (
               <motion.div
                 key={index}
-                className="bg-gradient-to-r from-pink-900/20 to-orange-900/20 border border-pink-400/30 rounded-lg p-6 backdrop-blur-sm hover:border-pink-400/50 transition-colors duration-300"
+                className="bg-white/80 backdrop-blur-executive border border-executive-chrome/30 rounded-lg p-6 shadow-executive-medium hover:shadow-executive-strong transition-all duration-300"
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-pink-300 mb-2">{gig}</h3>
-                    <div className="flex flex-wrap gap-4 text-gray-300">
+                    <h3 className="text-2xl font-bold text-executive-charcoal mb-2">{gig}</h3>
+                    <div className="flex flex-wrap gap-4 text-executive-slate">
                       <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-pink-400" />
+                        <Calendar className="w-4 h-4 text-executive-teal" />
                         <span>2023-2024</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-pink-400" />
+                        <MapPin className="w-4 h-4 text-executive-teal" />
                         <span>Various Venues</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-pink-400" />
+                        <Users className="w-4 h-4 text-executive-teal" />
                         <span>Live Performance</span>
                       </div>
                     </div>
                   </div>
-                  <button className="px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-300">
+                  <button className="px-6 py-3 bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold rounded-lg hover:scale-105 transition-transform duration-300 shadow-executive-medium hover:shadow-executive-glow">
                     View More
                   </button>
                 </div>
@@ -302,9 +285,9 @@ const BollywoodPage = () => {
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">&quot;{testimonial.text}&quot;</p>
-                <div className="text-pink-300 font-semibold">- {testimonial.name}</div>
-                <div className="text-gray-400 text-sm">{testimonial.venue}</div>
+                <p className="text-executive-slate mb-4 italic">&quot;{testimonial.text}&quot;</p>
+                <div className="text-executive-teal font-semibold">- {testimonial.name}</div>
+                <div className="text-executive-chrome-dark text-sm">{testimonial.venue}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -321,13 +304,13 @@ const BollywoodPage = () => {
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-6 text-pink-400"
+            className="text-4xl lg:text-6xl font-bold mb-6 text-executive-teal"
             variants={itemVariants}
           >
             Ready to Party?
           </motion.h2>
           <motion.p
-            className="text-xl text-gray-300 mb-8"
+            className="text-xl text-executive-slate mb-8"
             variants={itemVariants}
           >
             Book DJ Felicitous for your next event and let&apos;s create an unforgettable Bollywood experience!
@@ -336,12 +319,12 @@ const BollywoodPage = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={itemVariants}
           >
-            <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-orange-500 text-white font-bold rounded-lg neon-glow hover:scale-105 transition-transform duration-300">
+            <button className="px-8 py-4 bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold rounded-lg shadow-executive-medium hover:scale-105 transition-transform duration-300 hover:shadow-executive-glow">
               Book Now
             </button>
             <Link
               href="/"
-              className="px-8 py-4 border-2 border-pink-400 text-pink-400 font-bold rounded-lg hover:bg-pink-400/10 transition-colors duration-300 inline-flex items-center justify-center gap-2"
+              className="px-8 py-4 border-2 border-executive-teal text-executive-teal font-bold rounded-lg hover:bg-executive-teal/10 transition-colors duration-300 inline-flex items-center justify-center gap-2 shadow-executive-subtle"
             >
               <span>Back to Home</span>
               <ExternalLink className="w-4 h-4" />

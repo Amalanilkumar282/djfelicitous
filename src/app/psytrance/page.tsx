@@ -30,7 +30,7 @@ const PsytrancePage = () => {
     },
   };
 
-  const cosmicVariants = {
+  const executiveVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { 
       opacity: 1, 
@@ -38,32 +38,23 @@ const PsytrancePage = () => {
       transition: { 
         duration: 1,
         type: "spring" as const,
-        bounce: 0.4
+        bounce: 0.2
       }
     },
-    cosmic: {
-      scale: [1, 1.1, 1],
-      rotate: [0, 360],
-      transition: { 
-        duration: 20,
-        repeat: Infinity,
-        ease: "linear" as const
-      }
-    }
   };
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Animated Background */}
+    <div className="min-h-screen bg-executive-platinum text-executive-charcoal overflow-hidden">
+      {/* Professional Background */}
       <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-violet-900/20 to-indigo-900/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.2)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-executive-teal/10 via-executive-chrome/5 to-executive-accent/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(32,201,151,0.1)_0%,transparent_70%)]" />
         
-        {/* Cosmic floating elements */}
+        {/* Subtle floating elements */}
         <motion.div
-          className="absolute top-10 left-10 w-4 h-4 bg-purple-400 rounded-full blur-sm"
+          className="absolute top-10 left-10 w-3 h-3 bg-executive-teal/30 rounded-full blur-sm"
           animate={{
-            y: [0, -100, 0],
+            y: [0, -50, 0],
             x: [0, 50, 0],
             opacity: [0.3, 1, 0.3],
           }}
@@ -101,7 +92,7 @@ const PsytrancePage = () => {
           <motion.div variants={itemVariants} className="text-center lg:text-left">
             <motion.h1
               className="text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent"
-              variants={cosmicVariants}
+              variants={executiveVariants}
               animate="cosmic"
             >
               TINITRO COSMIC

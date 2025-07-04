@@ -40,41 +40,40 @@ const TechnoPage = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
         delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 24 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.6, ease: "easeOut" as const },
     },
   };
 
   const technoVariants = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, x: -32 },
     visible: { 
       opacity: 1, 
       x: 0,
       transition: { 
-        duration: 0.8,
-        type: "spring" as const,
-        stiffness: 100
+        duration: 0.6,
+        ease: "easeOut" as const
       }
     },
     pulse: {
-      scale: [1, 1.05, 1],
+      scale: [1, 1.02, 1],
       boxShadow: [
-        "0 0 20px rgba(0,255,255,0.5)",
-        "0 0 40px rgba(0,255,255,0.8)",
-        "0 0 20px rgba(0,255,255,0.5)",
+        "0 0 16px rgba(13, 115, 119, 0.3)",
+        "0 0 24px rgba(20, 160, 133, 0.4)",
+        "0 0 16px rgba(13, 115, 119, 0.3)",
       ],
       transition: { 
-        duration: 2,
+        duration: 3,
         repeat: Infinity,
         ease: "easeInOut" as const
       }

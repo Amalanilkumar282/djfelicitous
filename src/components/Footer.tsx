@@ -48,11 +48,11 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="relative bg-primary-bg border-t border-primary">
-      {/* Main Footer */}
+    <footer className="relative bg-executive border-t border-steel">
+      {/* Executive Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand Section */}
+          {/* Executive Brand Section */}
           <div className="lg:col-span-1">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -62,10 +62,10 @@ const Footer: React.FC = () => {
             >
               <Link href="/" className="group">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-platinum rounded-lg flex items-center justify-center">
                     <Music size={24} className="text-white" />
                   </div>
-                  <span className="font-space-grotesk font-bold text-xl text-white group-hover:text-electric-cyan transition-colors">
+                  <span className="font-space-grotesk font-bold text-xl text-platinum group-hover:text-accent transition-colors">
                     DJ FELICITOUS
                   </span>
                 </div>
