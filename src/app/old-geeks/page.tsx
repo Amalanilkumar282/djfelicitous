@@ -80,7 +80,7 @@ const OldGeeksPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-executive-platinum">
+    <div className="min-h-screen pt-20 bg-executive-platinum">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-executive-teal/5 via-executive-chrome/5 to-executive-accent/5" />

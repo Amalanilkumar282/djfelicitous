@@ -28,7 +28,7 @@ const DJCardGrid = dynamic(() => import('../components/DJCardGrid').then(mod => 
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-executive">
+    <div className="min-h-screen bg-executive mt-20">
       {/* Hero Section */}
       <HeroSection />
 

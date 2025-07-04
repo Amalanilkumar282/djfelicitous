@@ -44,7 +44,7 @@ const PsytrancePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-executive-platinum text-executive-charcoal overflow-hidden">
+    <div className="min-h-screen pt-20 bg-executive-platinum text-executive-charcoal overflow-hidden">
       {/* Professional Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-executive-teal/10 via-executive-chrome/5 to-executive-accent/10" />

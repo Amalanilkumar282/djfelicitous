@@ -15,7 +15,7 @@ export default function CoupleduoPage() {
   }
 
   return (
-    <div className="min-h-screen pt-16 bg-executive-platinum">
+    <div className="min-h-screen pt-20 bg-executive-platinum">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background */}
