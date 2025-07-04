@@ -95,16 +95,16 @@ const DJCard: React.FC<DJCardProps> = ({ profile, featured = false }) => {
             </div>
           </div>
 
-          {/* Call to Action */}
+          {/* Professional Call to Action */}
           <div className="pt-4">
             <motion.div
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className={`btn-ghost w-full justify-center ${
+              className={`btn-executive w-full justify-center ${
                 featured ? 'py-3' : 'py-2'
               }`}
             >
-              <span>Explore</span>
+              <span>Discover Project</span>
               <ExternalLink className="w-4 h-4" />
             </motion.div>
           </div>

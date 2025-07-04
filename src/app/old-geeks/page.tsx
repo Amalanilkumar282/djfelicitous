@@ -125,11 +125,11 @@ const OldGeeksPage = () => {
                 className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                 variants={itemVariants}
               >
-                <button className="btn-primary">
+                <button className="btn-platinum">
                   <Play className="w-5 h-5" />
-                  Explore Collection
+                  Discover Collection
                 </button>
-                <button className="btn-secondary">
+                <button className="btn-executive">
                   <Music className="w-5 h-5" />
                   View Playlists
                 </button>

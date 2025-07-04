@@ -76,10 +76,10 @@ export default function NotFound() {
             </motion.div>
           </div>
 
-          {/* Suggestions */}
+          {/* Professional Suggestions */}
           <div className="mt-12 pt-8 border-t border-secondary">
             <h3 className="font-space-grotesk text-lg font-semibold text-white mb-4">
-              Explore Our <span className="text-electric-cyan">Music</span>
+              Discover Our <span className="text-electric-cyan">Musical Universe</span>
             </h3>
             
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
