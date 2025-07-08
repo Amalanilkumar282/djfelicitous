@@ -71,7 +71,6 @@ export const placeholderImages = {
   'bollywood': '/images/bollywood.jpg',
   'psytrance': '/images/psytrance.jpg',
   'techno': '/images/techno.jpg',
-  'old-geeks': '/images/old-geeks.jpg',
   
   // Gallery images for each DJ profile
   gallery: {
@@ -92,11 +91,7 @@ export const placeholderImages = {
 
     couple1: '/images/couple-1.jpg',
     couple2: '/images/couple-2.jpg',
-    couple3: '/images/couple-3.jpg',
-
-    geeks1: '/images/oldgeeks-1.jpg',
-    geeks2: '/images/oldgeeks-2.jpg',
-    geeks3: '/images/oldgeeks-3.jpg'
+    couple3: '/images/couple-3.jpg'
   }
 };
 
@@ -130,12 +125,6 @@ export const getGalleryImages = (profileId: string): string[] => {
         placeholderImages.gallery.couple2,
         placeholderImages.gallery.couple3
       ];
-    case 'old-geeks':
-      return [
-        placeholderImages.gallery.geeks1,
-        placeholderImages.gallery.geeks2,
-        placeholderImages.gallery.geeks3
-      ];
     default:
       return [];
   }
@@ -147,8 +136,7 @@ export const getProfileImage = (profileId: string): string => {
     'couple-duo': placeholderImages['couple-duo'],
     'bollywood': placeholderImages['bollywood'],
     'psytrance': placeholderImages['psytrance'],
-    'techno': placeholderImages['techno'],
-    'old-geeks': placeholderImages['old-geeks']
+    'techno': placeholderImages['techno']
   };
   
   return profileImages[profileId as keyof typeof profileImages] || placeholderImages['techno'];

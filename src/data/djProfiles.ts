@@ -130,14 +130,14 @@ export const djProfiles: DJProfile[] = [
   },
   {
     id: 'psytrance',
-    name: 'Tinitro Cosmic',
+    name: 'TinitroCosmic',
     subtitle: 'Psychedelic Journey Guide',
     description: 'Transcend reality through hypnotic beats and otherworldly soundscapes.',
     genre: 'Psy Trance / Progressive',
     image: '/images/psytrance.jpg',
     color: 'neon-purple',
     route: '/psytrance',
-    bio: 'As Tinitro Cosmic, the journey into the depths of consciousness begins. Specializing in psychedelic trance and progressive beats, every set is designed to take listeners on a transformative journey through space and time. The cosmic soundscapes and hypnotic rhythms create an otherworldly experience.',
+    bio: 'As TinitroCosmic, the journey into the depths of consciousness begins. Specializing in psychedelic trance and progressive beats, every set is designed to take listeners on a transformative journey through space and time. The cosmic soundscapes and hypnotic rhythms create an otherworldly experience.',
     gigs: [
       'Boom Festival Portugal',
       'Ozora Festival Hungary',
@@ -214,60 +214,6 @@ export const djProfiles: DJProfile[] = [
       instagram: '@tnt_techno',
       soundcloud: 'tnt-techno',
       spotify: 'TNT'
-    }
-  },
-  {
-    id: 'old-geeks',
-    name: 'Old Geeks',
-    subtitle: 'Classic Electronic & Curated Gems',
-    description: 'A nostalgic journey through the golden age of electronic music.',
-    genre: 'Classic Electronic / Curated',
-    image: '/images/old-geeks.jpg',
-    color: 'neon-lime',
-    route: '/old-geeks',
-    bio: 'Old Geeks is a tribute to the pioneers of electronic music. Featuring carefully curated selections of classic house, early techno, ambient, and experimental electronic music from the 80s, 90s, and early 2000s. This project celebrates the artists and tracks that laid the foundation for modern electronic music.',
-    gigs: [
-      'Vintage Electronic Nights',
-      'Retro Future Festival',
-      'Classic House Revival',
-      'Electronic Music Museum',
-      'Nostalgia Festival',
-      'Acid House Reunion',
-      'Early Rave Tribute',
-      'Electronic Pioneers Showcase'
-    ],
-    gallery: [
-      '/images/oldgeeks-1.jpg',
-      '/images/oldgeeks-2.jpg',
-      '/images/oldgeeks-3.jpg',
-      '/images/oldgeeks-4.jpg'
-    ],
-    playlists: [
-      {
-        name: 'Golden Age of Electronic',
-        url: 'https://spotify.com/playlist/golden-age-electronic',
-        platform: 'Spotify'
-      },
-      {
-        name: 'Acid House Classics',
-        url: 'https://soundcloud.com/oldgeeks/acid-house-classics',
-        platform: 'SoundCloud'
-      },
-      {
-        name: 'Early Techno Pioneers',
-        url: 'https://spotify.com/playlist/early-techno-pioneers',
-        platform: 'Spotify'
-      },
-      {
-        name: 'Ambient Journeys',
-        url: 'https://soundcloud.com/oldgeeks/ambient-journeys',
-        platform: 'SoundCloud'
-      }
-    ],
-    social: {
-      instagram: '@oldgeeks_music',
-      soundcloud: 'oldgeeks',
-      spotify: 'Old Geeks'
     }
   }
 ];

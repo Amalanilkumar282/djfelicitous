@@ -20,7 +20,6 @@ const Footer: React.FC = () => {
         { name: 'Bollywood', href: '/bollywood' },
         { name: 'Psy Trance', href: '/psytrance' },
         { name: 'Techno', href: '/techno' },
-        { name: 'Old Geeks', href: '/old-geeks' },
       ]
     },
     {

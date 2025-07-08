@@ -12,9 +12,8 @@ Visit the website at: **http://localhost:3001** (during development)
 
 - **Couple Duo**: DJ Felicitous & DJ Geetz - Dynamic duo performances
 - **Bollywood**: DJ Felicitous - Vibrant Bollywood and commercial hits
-- **Psy Trance**: Tinitro Cosmic - Psychedelic journey through cosmic soundscapes
+- **Psy Trance**: TinitroCosmic - Psychedelic journey through cosmic soundscapes
 - **Techno**: TNT - Underground techno experiences
-- **Old Geeks**: Curated playlists and classic music collections
 
 ### 🎨 Design Features
 
@@ -59,8 +58,7 @@ djfelicitous/
 │   │   ├── couple-duo/  # Couple duo project page
 │   │   ├── bollywood/   # Bollywood project page
 │   │   ├── psytrance/   # Psy trance project page
-│   │   ├── techno/      # Techno project page
-│   │   └── old-geeks/   # Old geeks project page
+│   │   └── techno/      # Techno project page
 │   ├── components/
 │   │   ├── DJCard.tsx       # Interactive DJ project cards
 │   │   ├── DJCardGrid.tsx   # Grid layout for cards
@@ -180,7 +178,6 @@ Each DJ identity has a dedicated page with:
 - **Bollywood**: Orange/amber theme, vibrant energy
 - **Psy Trance**: Purple/violet theme, cosmic elements
 - **Techno**: Cyan/blue theme, industrial aesthetics
-- **Old Geeks**: Green theme, retro/vintage elements
 
 ## 🔧 Customization
 
@@ -276,7 +273,6 @@ Currently using SVG placeholders. Replace with actual images:
 
 - [ ] Music player with SoundCloud/Spotify integration
 - [ ] Image lightbox for gallery viewing
-- [ ] Blog section for Old Geeks
 - [ ] Event calendar integration
 - [ ] Contact form with email service
 

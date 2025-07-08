@@ -28,7 +28,6 @@ const Navbar: React.FC = () => {
     { href: '/bollywood', label: 'Bollywood' },
     { href: '/psytrance', label: 'Psy Trance' },
     { href: '/techno', label: 'Techno' },
-    { href: '/old-geeks', label: 'Old Geeks' },
   ];
 
   return (
