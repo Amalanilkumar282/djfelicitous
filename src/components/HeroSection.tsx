@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Play, Music, Headphones } from 'lucide-react';
+import { Music } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -22,11 +22,6 @@ const HeroSection: React.FC = () => {
       
       {/* Refined Grid Overlay */}
       <div className="absolute inset-0 techno-grid opacity-30" />
-      
-      {/* Professional accent elements */}
-      <div className="absolute top-20 left-20 w-2 h-2 bg-electric-cyan rounded-full animate-subtle-pulse" />
-      <div className="absolute top-40 right-32 w-1 h-1 bg-electric-orange rounded-full animate-subtle-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-acid-green rounded-full animate-subtle-pulse" style={{ animationDelay: '2s' }} />
 
       {/* Main Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto pt-16 sm:pt-20 lg:pt-24">
@@ -94,68 +89,10 @@ const HeroSection: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Professional floating elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute top-1/4 left-1/6 text-electric-cyan opacity-20"
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        >
-          <Headphones size={24} />
-        </motion.div>
-        
-        <motion.div
-          className="absolute top-3/4 right-1/6 text-electric-cyan opacity-20"
-          animate={{
-            y: [0, -15, 0],
-            opacity: [0.2, 0.3, 0.2],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        >
-          <Music size={20} />
-        </motion.div>
-      </div>
 
 
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.6 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className="w-1 h-3 bg-gray-400 rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
+
     </section>
   );
 };
