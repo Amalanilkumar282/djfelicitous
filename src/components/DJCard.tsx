@@ -37,11 +37,14 @@ const DJCard: React.FC<DJCardProps> = ({ profile, featured = false }) => {
           />
 
           {/* Enhanced Multi-Layer Overlay System */}
-          {/* Base Dark Overlay */}
-          <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/60" />
+          {/* Enhanced Base Dark Overlay for Better Content Visibility */}
+          <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:bg-black/75" />
+          
+          {/* Strong Content Readability Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
           
           {/* Executive Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-bg-executive via-bg-executive/60 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-t from-bg-executive via-bg-executive/40 to-transparent opacity-60 group-hover:opacity-70 transition-opacity duration-300" />
           
           {/* Platinum Accent Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-platinum-blue/10 via-transparent to-electric-teal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
