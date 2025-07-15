@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
           </h1>
         </motion.div>
 
-        {/* Enhanced Round Photo Frame */}
+        {/* Professional Integrated Photo Frame */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -63,58 +63,92 @@ const HeroSection: React.FC = () => {
           className="mb-8"
         >
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 mx-auto">
-            {/* Outer glow effect */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-electric-cyan/20 via-chrome-cyan/15 to-electric-cyan/20 blur-xl animate-pulse" />
-            
-            {/* Secondary glow ring */}
-            <div className="absolute inset-2 rounded-full bg-gradient-to-r from-electric-cyan/30 via-transparent to-electric-cyan/30 blur-lg" />
-            
-            {/* Main frame with enhanced styling */}
-            <div className="absolute inset-0 rounded-full bg-gradient-primary p-1 shadow-2xl backdrop-blur-sm">
-              {/* Inner border with subtle glow */}
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-800/90 via-gray-900/95 to-black/90 backdrop-blur-md border border-electric-cyan/30 shadow-inner flex items-center justify-center overflow-hidden">
-                {/* Profile Image */}
-                <div className="relative w-full h-full rounded-full overflow-hidden">
-                  <Image
-                    src="/images/profile.jpg"
-                    alt="DJ Felicitous"
-                    fill
-                    className="object-cover rounded-full"
-                    priority
-                    sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
-                  />
-                  {/* Enhanced overlay for better integration */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-electric-cyan/10 rounded-full" />
-                  
-                  {/* Subtle inner glow */}
-                  <div className="absolute inset-0 rounded-full shadow-inner shadow-electric-cyan/20" />
-                </div>
-              </div>
+            {/* Background sampling effect - creates a frosted glass backdrop */}
+            <div className="absolute inset-0 rounded-full">
+              <div className="absolute inset-0 rounded-full backdrop-blur-md bg-gradient-to-br from-white/10 via-white/5 to-white/10 shadow-2xl" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-electric-cyan/20 via-transparent to-chrome-cyan/20" />
             </div>
             
-            {/* Floating particles effect */}
+            {/* Dynamic light reflections */}
+            <div className="absolute inset-0 rounded-full overflow-hidden">
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                animate={{
+                  background: [
+                    'radial-gradient(circle at 30% 30%, rgba(45, 212, 191, 0.3) 0%, transparent 50%)',
+                    'radial-gradient(circle at 70% 70%, rgba(45, 212, 191, 0.3) 0%, transparent 50%)',
+                    'radial-gradient(circle at 30% 30%, rgba(45, 212, 191, 0.3) 0%, transparent 50%)',
+                  ],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+              />
+            </div>
+            
+            {/* Chromatic aberration effect */}
+            <div className="absolute inset-1 rounded-full bg-gradient-to-br from-red-500/5 via-transparent to-blue-500/5 mix-blend-multiply" />
+            
+            {/* Main professional frame */}
+            <div className="absolute inset-2 rounded-full bg-gradient-to-br from-white/20 via-white/10 to-white/5 backdrop-blur-xl border border-white/30 shadow-2xl">
+              {/* Inner glass effect */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-transparent via-white/5 to-transparent" />
+              
+              {/* Profile image container */}
+              <div className="relative w-full h-full rounded-full overflow-hidden">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="DJ Felicitous"
+                  fill
+                  className="object-cover rounded-full mix-blend-normal"
+                  priority
+                  sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
+                />
+                
+                {/* Professional overlay system */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-white/10 rounded-full" />
+                <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/15 via-transparent to-chrome-cyan/10 rounded-full mix-blend-overlay" />
+                
+                {/* Subtle vignette effect */}
+                <div className="absolute inset-0 rounded-full shadow-inner shadow-black/30" />
+              </div>
+              
+              
+            </div>
+            
+            {/* Ambient particle system */}
             <div className="absolute inset-0 pointer-events-none">
-              {Array.from({ length: 6 }).map((_, i) => (
+              {Array.from({ length: 12 }).map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-1 h-1 bg-electric-cyan/40 rounded-full"
+                  className="absolute w-0.5 h-0.5 bg-electric-cyan/60 rounded-full"
                   animate={{
-                    y: [0, -20, 0],
-                    opacity: [0.4, 0.8, 0.4],
-                    scale: [1, 1.5, 1],
+                    x: [0, Math.random() * 40 - 20, 0],
+                    y: [0, Math.random() * 40 - 20, 0],
+                    opacity: [0.3, 0.8, 0.3],
+                    scale: [0.8, 1.2, 0.8],
                   }}
                   transition={{
-                    duration: 3 + Math.random() * 2,
+                    duration: 4 + Math.random() * 3,
                     repeat: Infinity,
                     ease: 'easeInOut',
-                    delay: Math.random() * 2,
+                    delay: Math.random() * 3,
                   }}
                   style={{
-                    left: `${20 + Math.random() * 60}%`,
-                    top: `${20 + Math.random() * 60}%`,
+                    left: `${30 + Math.random() * 40}%`,
+                    top: `${30 + Math.random() * 40}%`,
                   }}
                 />
               ))}
+            </div>
+            
+            {/* Professional reflection highlights */}
+            <div className="absolute inset-4 rounded-full">
+              <div className="absolute top-6 left-6 w-8 h-8 bg-white/20 rounded-full blur-sm" />
+              <div className="absolute top-4 right-8 w-4 h-4 bg-electric-cyan/30 rounded-full blur-sm" />
+              <div className="absolute bottom-8 left-8 w-6 h-6 bg-white/15 rounded-full blur-sm" />
             </div>
           </div>
         </motion.div>
