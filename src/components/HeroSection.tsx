@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { Music } from 'lucide-react';
 import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
@@ -14,20 +15,28 @@ const HeroSection: React.FC = () => {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Hero Background Image */}
-      <motion.div 
-        className="absolute inset-0"
-        style={{ y }}
-      >
-        <Image
-          src="/images/hero.jpg"
-          alt="DJ Felicitous Hero Background"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-      </motion.div>
+      {/* Hero Background Video */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+        >
+          <source src="/images/herobg.mp4" type="video/mp4" />
+          {/* Fallback image for browsers that don't support video */}
+          <Image
+            src="/images/hero.jpg"
+            alt="DJ Felicitous Hero Background"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+        </video>
+      </div>
 
       {/* Reduced Dark Overlay for Content Visibility */}
       <div className="absolute inset-0 bg-black/40" />
@@ -113,7 +122,6 @@ const HeroSection: React.FC = () => {
                 {/* Subtle vignette effect */}
                 <div className="absolute inset-0 rounded-full shadow-inner shadow-black/30" />
               </div>
-              
               
             </div>
             
