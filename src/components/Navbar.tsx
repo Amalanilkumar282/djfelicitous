@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Music } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,14 +46,18 @@ const Navbar: React.FC = () => {
           <Link href="/" className="group">
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="flex items-center space-x-3"
+              className="flex items-center"
             >
-              <div className="w-10 h-10 bg-gradient-platinum rounded-lg flex items-center justify-center">
-                <Music className="w-5 h-5 text-white" />
+              <div className="relative h-12 w-auto max-w-[280px]">
+                <Image
+                  src="/logo.png"
+                  alt="DJ Felicitous"
+                  width={280}
+                  height={48}
+                  className="h-12 w-auto object-contain max-h-12"
+                  priority
+                />
               </div>
-              <span className="font-space-grotesk font-bold text-xl text-platinum">
-                DJ FELICITOUS
-              </span>
             </motion.div>
           </Link>
 
