@@ -30,14 +30,14 @@ const HeroSection: React.FC = () => {
         />
       </motion.div>
 
-      {/* Dark Overlay for Content Visibility */}
-      <div className="absolute inset-0 bg-black/60" />
+      {/* Reduced Dark Overlay for Content Visibility */}
+      <div className="absolute inset-0 bg-black/40" />
       
-      {/* Additional Gradient Overlay for Better Text Contrast */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60" />
+      {/* Lighter Gradient Overlay for Better Text Contrast */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/40" />
       
       {/* Refined Grid Overlay */}
-      <div className="absolute inset-0 techno-grid opacity-20" />
+      <div className="absolute inset-0 techno-grid opacity-15" />
 
       {/* Main Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto pt-16 sm:pt-20 lg:pt-24">
@@ -55,7 +55,7 @@ const HeroSection: React.FC = () => {
           </h1>
         </motion.div>
 
-        {/* Round Photo Frame */}
+        {/* Enhanced Round Photo Frame */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -63,8 +63,16 @@ const HeroSection: React.FC = () => {
           className="mb-8"
         >
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 mx-auto">
-            <div className="absolute inset-0 rounded-full bg-gradient-primary p-1 shadow-2xl">
-              <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center overflow-hidden">
+            {/* Outer glow effect */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-electric-cyan/20 via-chrome-cyan/15 to-electric-cyan/20 blur-xl animate-pulse" />
+            
+            {/* Secondary glow ring */}
+            <div className="absolute inset-2 rounded-full bg-gradient-to-r from-electric-cyan/30 via-transparent to-electric-cyan/30 blur-lg" />
+            
+            {/* Main frame with enhanced styling */}
+            <div className="absolute inset-0 rounded-full bg-gradient-primary p-1 shadow-2xl backdrop-blur-sm">
+              {/* Inner border with subtle glow */}
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-800/90 via-gray-900/95 to-black/90 backdrop-blur-md border border-electric-cyan/30 shadow-inner flex items-center justify-center overflow-hidden">
                 {/* Profile Image */}
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <Image
@@ -75,10 +83,38 @@ const HeroSection: React.FC = () => {
                     priority
                     sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
                   />
-                  {/* Subtle overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-full" />
+                  {/* Enhanced overlay for better integration */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-electric-cyan/10 rounded-full" />
+                  
+                  {/* Subtle inner glow */}
+                  <div className="absolute inset-0 rounded-full shadow-inner shadow-electric-cyan/20" />
                 </div>
               </div>
+            </div>
+            
+            {/* Floating particles effect */}
+            <div className="absolute inset-0 pointer-events-none">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute w-1 h-1 bg-electric-cyan/40 rounded-full"
+                  animate={{
+                    y: [0, -20, 0],
+                    opacity: [0.4, 0.8, 0.4],
+                    scale: [1, 1.5, 1],
+                  }}
+                  transition={{
+                    duration: 3 + Math.random() * 2,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: Math.random() * 2,
+                  }}
+                  style={{
+                    left: `${20 + Math.random() * 60}%`,
+                    top: `${20 + Math.random() * 60}%`,
+                  }}
+                />
+              ))}
             </div>
           </div>
         </motion.div>
@@ -88,7 +124,7 @@ const HeroSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg sm:text-xl text-gray-200 mb-12 font-light max-w-4xl mx-auto leading-relaxed text-center drop-shadow-md"
+          className="text-lg sm:text-xl text-gray-100 mb-12 font-light max-w-4xl mx-auto leading-relaxed text-center drop-shadow-md"
         >
           A genre-fluid DJ based in Bangalore, DJ Felicitous blends sound and soul across every kind of dance floor. Known for curating energy-rich sets that span Bollywood, South Indian hits, Commercial, Hip-Hop, Techno, and Psytrance, Felicitous adapts to every crowd with unmatched versatility and stage presence. From high-energy club nights and wedding celebrations to underground raves and psychedelic festivals, every set is a unique story — crafted with rhythm, vibe, and connection.
         </motion.p>
@@ -106,7 +142,7 @@ const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 + index * 0.05 }}
-              className="px-4 py-2 border border-gray-400/50 rounded-lg text-sm font-medium text-gray-300 hover:border-electric-cyan hover:text-electric-cyan transition-all cursor-default backdrop-blur-sm bg-black/20"
+              className="px-4 py-2 border border-gray-300/40 rounded-lg text-sm font-medium text-gray-200 hover:border-electric-cyan hover:text-electric-cyan transition-all cursor-default backdrop-blur-sm bg-black/15 hover:bg-black/25"
             >
               {genre}
             </motion.span>
