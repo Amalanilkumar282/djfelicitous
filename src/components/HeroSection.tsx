@@ -92,57 +92,6 @@ const HeroSection: React.FC = () => {
             </motion.span>
           ))}
         </motion.div>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-primary flex items-center space-x-2 text-lg px-8 py-4"
-          >
-            <Music size={20} />
-            <span>BOOK EVENT</span>
-          </motion.button>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-secondary flex items-center space-x-2 text-lg px-8 py-4"
-          >
-            <Play size={20} />
-            <span>LISTEN NOW</span>
-          </motion.button>
-        </motion.div>
-
-        {/* Professional Stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.3 }}
-          className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
-        >
-          {[
-            { number: '500+', label: 'Events Performed' },
-            { number: '50+', label: 'Venues Worldwide' },
-            { number: '10+', label: 'Years Experience' }
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.5 + index * 0.2 }}
-              className="text-center"
-            >
-              <div className="text-3xl font-bold text-electric-cyan mb-2">{stat.number}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
 
       {/* Professional floating elements */}
@@ -177,6 +126,8 @@ const HeroSection: React.FC = () => {
           <Music size={20} />
         </motion.div>
       </div>
+
+
 
       {/* Scroll Indicator */}
       <motion.div
