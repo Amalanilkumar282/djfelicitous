@@ -18,6 +18,12 @@
   --silver-blue: #67e8f9;
   --pearl-white: #f0fdfa;
   
+  /* Additional Overlay Colors */
+  --overlay-dark: rgba(0, 0, 0, 0.4);
+  --overlay-dark-hover: rgba(0, 0, 0, 0.6);
+  --overlay-platinum: rgba(13, 115, 119, 0.1);
+  --overlay-teal: rgba(20, 160, 133, 0.1);
+  
   /* Executive Typography */
   --text-platinum: #ffffff;
   --text-silver: #e5e7eb;
