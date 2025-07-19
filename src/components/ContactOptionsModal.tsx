@@ -95,7 +95,6 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
               onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                console.log('Close button clicked'); // Debug log
                 onClose();
               }}
               className="absolute top-4 right-4 p-3 hover:bg-gray-800 rounded-full transition-colors z-20 cursor-pointer bg-gray-900/50 border border-gray-700 hover:border-gray-500"

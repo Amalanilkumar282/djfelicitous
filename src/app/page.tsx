@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { Play } from 'lucide-react';
+import Link from 'next/link';
 import { djProfiles } from '../data/djProfiles';
 import DiscographyCard from '../components/DiscographyCard';
 import ContactOptionsModal from '../components/ContactOptionsModal';
@@ -194,14 +195,16 @@ export default function Home() {
                 />
               </motion.button>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary flex items-center space-x-2 text-lg px-8 py-4"
-              >
-                <Play size={20} />
-                <span>LISTEN NOW</span>
-              </motion.button>
+              <Link href="/discography">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="btn-secondary flex items-center space-x-2 text-lg px-8 py-4"
+                >
+                  <Play size={20} />
+                  <span>LISTEN NOW</span>
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

@@ -38,21 +38,6 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      {/* Contact Options Modal */}
-      <ContactOptionsModal 
-        isOpen={showContactModal} 
-        onClose={() => setShowContactModal(false)}
-        onBookingFormOpen={() => setShowBookingModal(true)}
-      />
-      
-      {/* Booking Modal */}
-      <BookingModal 
-        isOpen={showBookingModal} 
-        onClose={() => setShowBookingModal(false)}
-        djName="DJ Felicitous"
-        djGenre="Multi-Genre Professional"
-      />
-
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -224,6 +209,24 @@ const Navbar: React.FC = () => {
         )}
       </AnimatePresence>
     </motion.nav>
+    
+    {/* Contact Options Modal */}
+    <ContactOptionsModal 
+      isOpen={showContactModal} 
+      onClose={() => setShowContactModal(false)}
+      onBookingFormOpen={() => {
+        setShowContactModal(false);
+        setShowBookingModal(true);
+      }}
+    />
+    
+    {/* Booking Modal */}
+    <BookingModal 
+      isOpen={showBookingModal} 
+      onClose={() => setShowBookingModal(false)}
+      djName="DJ Felicitous"
+      djGenre="Multi-Genre"
+    />
     </>
   );
 };
