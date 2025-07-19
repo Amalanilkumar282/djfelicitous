@@ -72,7 +72,7 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-2 sm:p-4"
           onClick={onClose}
         >
           <motion.div
@@ -80,13 +80,13 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 50 }}
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-cyan-500/30 rounded-3xl p-8 max-w-2xl w-full shadow-2xl"
+            className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-cyan-500/30 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 max-w-2xl w-full shadow-2xl max-h-[95vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Background Effects */}
-            <div className="absolute inset-0 rounded-3xl overflow-hidden">
-              <div className="absolute top-10 left-10 w-32 h-32 bg-cyan-400/10 rounded-full blur-2xl animate-pulse"></div>
-              <div className="absolute bottom-10 right-10 w-40 h-40 bg-emerald-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
+            <div className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden">
+              <div className="absolute top-4 sm:top-10 left-4 sm:left-10 w-20 sm:w-32 h-20 sm:h-32 bg-cyan-400/10 rounded-full blur-2xl animate-pulse"></div>
+              <div className="absolute bottom-4 sm:bottom-10 right-4 sm:right-10 w-24 sm:w-40 h-24 sm:h-40 bg-emerald-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
             </div>
 
             {/* Close Button */}
@@ -97,10 +97,10 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
                 e.stopPropagation();
                 onClose();
               }}
-              className="absolute top-4 right-4 p-3 hover:bg-gray-800 rounded-full transition-colors z-20 cursor-pointer bg-gray-900/50 border border-gray-700 hover:border-gray-500"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 p-2 sm:p-3 hover:bg-gray-800 rounded-full transition-colors z-20 cursor-pointer bg-gray-900/50 border border-gray-700 hover:border-gray-500"
               aria-label="Close modal"
             >
-              <X className="w-5 h-5 text-gray-300 hover:text-white" />
+              <X className="w-4 h-4 sm:w-5 sm:h-5 text-gray-300 hover:text-white" />
             </button>
 
             <div className="relative z-10">
@@ -109,18 +109,18 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
-                className="text-center mb-8"
+                className="text-center mb-6 sm:mb-8"
               >
-                <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mb-4">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mb-2 sm:mb-4">
                   Let&apos;s Connect!
                 </h2>
-                <p className="text-gray-300 text-lg">
+                <p className="text-gray-300 text-base sm:text-lg px-2">
                   Choose your preferred way to get in touch
                 </p>
               </motion.div>
 
               {/* Contact Options */}
-              <div className="grid gap-4 mb-8">
+              <div className="grid gap-3 sm:gap-4 mb-6 sm:mb-8">
                 {contactOptions.map((option) => {
                   const Icon = option.icon;
                   const isHovered = hoveredOption === option.id;
@@ -135,7 +135,7 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
                       onHoverStart={() => setHoveredOption(option.id)}
                       onHoverEnd={() => setHoveredOption(null)}
                       onClick={option.action}
-                      className={`relative cursor-pointer rounded-2xl border border-gray-700 p-6 transition-all duration-300 overflow-hidden group ${
+                      className={`relative cursor-pointer rounded-xl sm:rounded-2xl border border-gray-700 p-3 sm:p-4 lg:p-6 transition-all duration-300 overflow-hidden group ${
                         isHovered ? 'border-cyan-400/50 shadow-lg shadow-cyan-400/20' : 'hover:border-gray-600'
                       }`}
                     >
@@ -145,31 +145,31 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
                       {/* Hover Gradient Overlay */}
                       <div className={`absolute inset-0 bg-gradient-to-r ${option.hoverGradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
 
-                      <div className="relative z-10 flex items-center space-x-4">
+                      <div className="relative z-10 flex items-start sm:items-center space-x-3 sm:space-x-4">
                         <motion.div
                           animate={isHovered ? { scale: 1.1, rotate: 5 } : { scale: 1, rotate: 0 }}
-                          className={`p-4 rounded-xl bg-gradient-to-r ${option.gradient} shadow-lg`}
+                          className={`p-2 sm:p-3 lg:p-4 rounded-lg sm:rounded-xl bg-gradient-to-r ${option.gradient} shadow-lg flex-shrink-0`}
                         >
-                          <Icon size={24} className="text-white" />
+                          <Icon size={20} className="text-white sm:w-6 sm:h-6" />
                         </motion.div>
                         
-                        <div className="flex-1">
-                          <div className="flex items-center space-x-2 mb-1">
-                            <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-2 mb-1">
+                            <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
                               {option.title}
                             </h3>
-                            <span className={`px-2 py-1 text-xs font-semibold rounded-full bg-gradient-to-r ${option.gradient} text-white`}>
+                            <span className={`px-2 py-1 text-xs font-semibold rounded-full bg-gradient-to-r ${option.gradient} text-white inline-block w-fit mt-1 sm:mt-0`}>
                               {option.subtitle}
                             </span>
                           </div>
-                          <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                          <p className="text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors leading-tight">
                             {option.description}
                           </p>
                         </div>
 
                         <motion.div
                           animate={isHovered ? { x: 5 } : { x: 0 }}
-                          className="text-gray-400 group-hover:text-cyan-400 transition-colors"
+                          className="text-gray-400 group-hover:text-cyan-400 transition-colors flex-shrink-0 hidden sm:block"
                         >
                           →
                         </motion.div>
@@ -184,17 +184,17 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5 }}
-                className="bg-gray-800/50 rounded-2xl p-4 border border-gray-700"
+                className="bg-gray-800/50 rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-gray-700"
               >
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                   {quickInfo.map((info, index) => {
                     const Icon = info.icon;
                     return (
-                      <div key={index} className="flex items-center space-x-3 text-gray-300">
-                        <div className="p-2 bg-gradient-to-r from-cyan-400/20 to-emerald-400/20 rounded-lg">
-                          <Icon size={16} className="text-cyan-400" />
+                      <div key={index} className="flex items-center space-x-2 sm:space-x-3 text-gray-300">
+                        <div className="p-1.5 sm:p-2 bg-gradient-to-r from-cyan-400/20 to-emerald-400/20 rounded-lg flex-shrink-0">
+                          <Icon size={14} className="text-cyan-400 sm:w-4 sm:h-4" />
                         </div>
-                        <span className="text-sm font-medium">{info.text}</span>
+                        <span className="text-xs sm:text-sm font-medium truncate">{info.text}</span>
                       </div>
                     );
                   })}
@@ -206,7 +206,7 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.7 }}
-                className="text-center text-gray-500 text-sm mt-6"
+                className="text-center text-gray-500 text-xs sm:text-sm mt-4 sm:mt-6 px-2"
               >
                 We&apos;re here to make your event unforgettable! 🎵
               </motion.p>
