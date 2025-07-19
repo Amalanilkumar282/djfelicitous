@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Play, Pause, ExternalLink, Calendar, Clock, Heart, Eye } from 'lucide-react';
-import { discography, albums, Track } from '../../data/discography';
-import Image from 'next/image';
+import { discography, albums } from '../../data/discography';
 import QuickAccessWidget from '../../components/QuickAccessWidget';
+import FloatingContactWidget from '../../components/FloatingContactWidget';
 
 export default function DiscographyPage() {
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'original' | 'remix' | 'live-set' | 'collaboration'>('all');
@@ -37,6 +37,9 @@ export default function DiscographyPage() {
     <div className="min-h-screen bg-executive pt-20 relative">
       {/* Quick Access Widget */}
       <QuickAccessWidget />
+
+      {/* Floating Contact Widget */}
+      <FloatingContactWidget />
 
       {/* Floating Back to Top Button */}
       <motion.button

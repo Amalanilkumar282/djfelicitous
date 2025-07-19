@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowLeft, Play, Instagram, Calendar, Star, Quote } from 'lucide-react';
 import { FaSoundcloud, FaSpotify } from 'react-icons/fa';
 import { getProfileByRoute } from '@/data/djProfiles';
+import FloatingContactWidget from '../../components/FloatingContactWidget';
 
 export default function CoupleduoPage() {
   const profile = getProfileByRoute('/couple-duo');
@@ -16,6 +17,9 @@ export default function CoupleduoPage() {
 
   return (
     <div className="min-h-screen pt-20 bg-executive-platinum">
+      {/* Floating Contact Widget */}
+      <FloatingContactWidget />
+
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background */}
@@ -291,9 +295,24 @@ export default function CoupleduoPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-neon-pink via-neon-magenta to-neon-cyan text-black font-bold text-lg px-12 py-4 rounded-full hover:animate-pulse-glow transition-all shadow-2xl"
+              onClick={() => {
+                const message = encodeURIComponent("Hi! I'm interested in booking DJ Felicitous & DJ Geetz for a couple's event. Could you please provide a quote?");
+                window.open(`https://wa.me/919847352182?text=${message}`, '_blank');
+              }}
+              className="bg-gradient-to-r from-neon-pink via-neon-magenta to-neon-cyan text-black font-bold text-lg px-12 py-4 rounded-full hover:animate-pulse-glow transition-all shadow-2xl relative overflow-hidden group"
             >
-              GET BOOKING QUOTE
+              <span className="relative z-10">GET QUOTE VIA WHATSAPP</span>
+              <motion.div
+                initial={{ x: '-100%' }}
+                animate={{ x: '100%' }}
+                transition={{ 
+                  duration: 2.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "linear"
+                }}
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+              />
             </motion.button>
           </motion.div>
         </div>

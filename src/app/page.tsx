@@ -2,10 +2,13 @@
 
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
+import { useState } from 'react';
 import { Play } from 'lucide-react';
 import { djProfiles } from '../data/djProfiles';
 import DiscographyCard from '../components/DiscographyCard';
+import ContactOptionsModal from '../components/ContactOptionsModal';
+import BookingModal from '../components/BookingModal';
+import FloatingContactWidget from '../components/FloatingContactWidget';
 
 // Dynamically import components to avoid SSR issues
 const HeroSection = dynamic(() => import('../components/HeroSection').then(mod => ({ default: mod.default })), {
@@ -30,8 +33,28 @@ const DJCardGrid = dynamic(() => import('../components/DJCardGrid').then(mod => 
 });
 
 export default function Home() {
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [showBookingModal, setShowBookingModal] = useState(false);
+
   return (
     <div className="min-h-screen bg-executive mt-20">
+      {/* Contact Options Modal */}
+      <ContactOptionsModal 
+        isOpen={showContactModal} 
+        onClose={() => setShowContactModal(false)}
+        onBookingFormOpen={() => setShowBookingModal(true)}
+      />
+      
+      {/* Booking Modal */}
+      <BookingModal 
+        isOpen={showBookingModal} 
+        onClose={() => setShowBookingModal(false)}
+        djName="DJ Felicitous"
+        djGenre="Multi-Genre Professional"
+      />
+
+      {/* Floating Contact Widget */}
+      <FloatingContactWidget />
       {/* Hero Section */}
       <HeroSection />
 
@@ -153,9 +176,22 @@ export default function Home() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-primary text-lg px-12 py-4"
+                onClick={() => setShowContactModal(true)}
+                className="btn-primary text-lg px-12 py-4 relative overflow-hidden group"
               >
-                BOOK YOUR EVENT NOW
+                <span className="relative z-10">BOOK YOUR EVENT NOW</span>
+                {/* Enhanced button animation */}
+                <motion.div
+                  initial={{ x: '-100%' }}
+                  animate={{ x: '100%' }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "linear"
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                />
               </motion.button>
 
               <motion.button

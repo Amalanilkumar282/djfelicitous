@@ -6,11 +6,15 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import ContactOptionsModal from './ContactOptionsModal';
+import BookingModal from './BookingModal';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [showBookingModal, setShowBookingModal] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -33,14 +37,30 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        mounted && scrolled ? 'glass-navbar' : 'bg-transparent'
-      }`}
-    >
+    <>
+      {/* Contact Options Modal */}
+      <ContactOptionsModal 
+        isOpen={showContactModal} 
+        onClose={() => setShowContactModal(false)}
+        onBookingFormOpen={() => setShowBookingModal(true)}
+      />
+      
+      {/* Booking Modal */}
+      <BookingModal 
+        isOpen={showBookingModal} 
+        onClose={() => setShowBookingModal(false)}
+        djName="DJ Felicitous"
+        djGenre="Multi-Genre Professional"
+      />
+
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          mounted && scrolled ? 'glass-navbar' : 'bg-transparent'
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Executive Logo */}
@@ -110,11 +130,24 @@ const Navbar: React.FC = () => {
             whileTap={{ scale: 0.95 }}
             className="hidden md:block"
           >
-            <Link href="/contact">
-              <button className="btn-primary">
-                BOOK NOW
-              </button>
-            </Link>
+            <button 
+              onClick={() => setShowContactModal(true)}
+              className="btn-primary relative overflow-hidden group"
+            >
+              <span className="relative z-10">BOOK NOW</span>
+              {/* Subtle shimmer effect */}
+              <motion.div
+                initial={{ x: '-100%' }}
+                animate={{ x: '100%' }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "linear"
+                }}
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+              />
+            </button>
           </motion.div>
 
           {/* Mobile menu button */}
@@ -163,22 +196,35 @@ const Navbar: React.FC = () => {
 
               {/* Mobile Book Now */}
               <div className="pt-4 border-t border-border-primary">
-                <Link href="/contact">
-                  <motion.button
-                    onClick={() => setIsOpen(false)}
-                    className="w-full btn-primary justify-center"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    BOOK NOW
-                  </motion.button>
-                </Link>
+                <motion.button
+                  onClick={() => {
+                    setIsOpen(false);
+                    setShowContactModal(true);
+                  }}
+                  className="w-full btn-primary justify-center relative overflow-hidden group"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="relative z-10">BOOK NOW</span>
+                  <motion.div
+                    initial={{ x: '-100%' }}
+                    animate={{ x: '100%' }}
+                    transition={{ 
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatType: "loop",
+                      ease: "linear"
+                    }}
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                  />
+                </motion.button>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </motion.nav>
+    </>
   );
 };
 

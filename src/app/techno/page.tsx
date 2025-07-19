@@ -6,6 +6,7 @@ import { djProfiles } from '@/data/djProfiles';
 import { placeholderImages } from '@/utils/placeholders';
 import Link from 'next/link';
 import Image from 'next/image';
+import FloatingContactWidget from '../../components/FloatingContactWidget';
 
 const TechnoPage = () => {
   const profile = djProfiles.find(dj => dj.id === 'techno')!;
@@ -77,6 +78,9 @@ const TechnoPage = () => {
 
   return (
     <div className="min-h-screen pt-20 bg-black text-white overflow-hidden">
+      {/* Floating Contact Widget */}
+      <FloatingContactWidget />
+
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-cyan-900/20 to-black" />

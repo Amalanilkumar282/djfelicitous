@@ -6,6 +6,7 @@ import { djProfiles } from '@/data/djProfiles';
 import { placeholderImages } from '@/utils/placeholders';
 import Link from 'next/link';
 import Image from 'next/image';
+import FloatingContactWidget from '../../components/FloatingContactWidget';
 
 const PsytrancePage = () => {
   const profile = djProfiles.find(dj => dj.id === 'psytrance')!;
@@ -45,6 +46,9 @@ const PsytrancePage = () => {
 
   return (
     <div className="min-h-screen pt-20 bg-executive-platinum text-executive-charcoal overflow-hidden">
+      {/* Floating Contact Widget */}
+      <FloatingContactWidget />
+
       {/* Professional Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-executive-teal/10 via-executive-chrome/5 to-executive-accent/10" />

@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { Play, Pause, ExternalLink, Calendar, Clock, Heart, Eye } from 'lucide-react';
 import { Track } from '../data/discography';
 

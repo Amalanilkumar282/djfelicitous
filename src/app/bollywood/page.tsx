@@ -6,6 +6,7 @@ import { djProfiles } from '@/data/djProfiles';
 import { placeholderImages } from '@/utils/placeholders';
 import Link from 'next/link';
 import Image from 'next/image';
+import FloatingContactWidget from '../../components/FloatingContactWidget';
 
 const BollywoodPage = () => {
   const profile = djProfiles.find(dj => dj.id === 'bollywood')!;
@@ -43,6 +44,9 @@ const BollywoodPage = () => {
 
   return (
     <div className="min-h-screen pt-20 bg-executive-platinum overflow-hidden">
+      {/* Floating Contact Widget */}
+      <FloatingContactWidget />
+
       {/* Executive Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-executive-teal/5 via-executive-chrome/5 to-executive-accent/5" />
@@ -319,9 +323,29 @@ const BollywoodPage = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={itemVariants}
           >
-            <button className="px-8 py-4 bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold rounded-lg shadow-executive-medium hover:scale-105 transition-transform duration-300 hover:shadow-executive-glow">
-              Book Now
-            </button>
+            <motion.button
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const message = encodeURIComponent("Hi! I'm interested in booking DJ Felicitous for a Bollywood event. Could you please provide more details?");
+                window.open(`https://wa.me/919847352182?text=${message}`, '_blank');
+              }}
+              className="px-8 py-4 bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold rounded-lg shadow-executive-medium hover:scale-105 transition-transform duration-300 hover:shadow-executive-glow relative overflow-hidden group"
+            >
+              <span className="relative z-10">Book Now via WhatsApp</span>
+              <motion.div
+                initial={{ x: '-100%' }}
+                animate={{ x: '100%' }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "linear"
+                }}
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              />
+            </motion.button>
             <Link
               href="/"
               className="px-8 py-4 border-2 border-executive-teal text-executive-teal font-bold rounded-lg hover:bg-executive-teal/10 transition-colors duration-300 inline-flex items-center justify-center gap-2 shadow-executive-subtle"
