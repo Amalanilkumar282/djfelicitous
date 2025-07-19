@@ -91,10 +91,17 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
 
             {/* Close Button */}
             <button
-              onClick={onClose}
-              className="absolute top-4 right-4 p-2 hover:bg-gray-800 rounded-full transition-colors z-10"
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Close button clicked'); // Debug log
+                onClose();
+              }}
+              className="absolute top-4 right-4 p-3 hover:bg-gray-800 rounded-full transition-colors z-20 cursor-pointer bg-gray-900/50 border border-gray-700 hover:border-gray-500"
+              aria-label="Close modal"
             >
-              <X className="w-6 h-6 text-gray-400 hover:text-white" />
+              <X className="w-5 h-5 text-gray-300 hover:text-white" />
             </button>
 
             <div className="relative z-10">
