@@ -31,6 +31,8 @@ export default function CoupleduoPage() {
             className="object-cover"
             priority
           />
+          {/* Enhanced dark overlay for better content visibility */}
+          <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-t from-executive-charcoal/80 via-executive-charcoal/30 to-transparent" />
         </div>
 
