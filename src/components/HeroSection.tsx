@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
           className="mb-8"
         >
           <h1 className="font-space-grotesk text-5xl sm:text-7xl lg:text-8xl font-bold mb-4">
-            <span className="block text-white bg-gradient-to-r from-electric-cyan via-white to-electric-cyan bg-clip-text text-transparent drop-shadow-lg">
+            <span className="block bg-gradient-to-r from-electric-cyan via-white to-electric-cyan bg-clip-text text-transparent drop-shadow-lg">
               DJ FELICITOUS
             </span>
           </h1>
