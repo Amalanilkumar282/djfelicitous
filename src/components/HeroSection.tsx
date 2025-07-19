@@ -174,7 +174,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-wrap justify-center items-center gap-3 mb-12 max-w-4xl mx-auto"
         >
-          {['BOLLYWOOD', 'SOUTH-INDIAN HITS', 'BOLLY-TECH', 'TECHNO', 'DEEP HOUSE', 'TECH-HOUSE', 'PROGRESSIVE HOUSE', 'ELECTRO HOUSE', 'PSYTRANCE'].map((genre, index) => (
+          {['BOLLYWOOD', 'SOUTH-INDIAN HITS', 'BOLLY-TECH','AFRO-BOLLY', 'TECHNO', 'DEEP HOUSE','AFRO HOUSE', 'TECH-HOUSE', 'PROGRESSIVE HOUSE', 'ELECTRO HOUSE', 'PSYTRANCE'].map((genre, index) => (
             <motion.span
               key={genre}
               initial={{ opacity: 0, y: 20 }}

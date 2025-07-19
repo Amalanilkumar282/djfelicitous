@@ -119,7 +119,7 @@ const DJCard: React.FC<DJCardProps> = ({ profile, featured = false }) => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-1">
                 <Music className="w-4 h-4 text-accent-primary" />
-                <span>{profile.gigs?.length || 5}+ Events</span>
+                <span>100+ Events</span>
               </div>
               <div className="flex items-center space-x-1">
                 <motion.span 

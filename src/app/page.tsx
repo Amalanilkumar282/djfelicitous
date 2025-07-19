@@ -88,9 +88,9 @@ export default function Home() {
               className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto mb-12"
             >
               {[
-                { number: '500+', label: 'Events Performed' },
-                { number: '50+', label: 'Venues Worldwide' },
-                { number: '10+', label: 'Years Experience' }
+                { number: '100+', label: 'Events Performed' },
+                { number: '50+', label: 'Venues' },
+                { number: '5+', label: 'Years Experience' }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

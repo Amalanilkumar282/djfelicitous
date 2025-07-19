@@ -42,7 +42,7 @@ export const djProfiles: DJProfile[] = [
     featured: true,
     bio: 'DJ Felicitous and DJ Geetz are not just partners in love, but also in music. Their unique chemistry creates an unparalleled energy on the dance floor, seamlessly blending genres and reading crowds like no other duo. With years of experience both individually and together, they bring a special magic to every event.',
     gigs: [
-      'Tomorrowland Belgium 2023',
+      'Big pitcher Bengaluru',
       'Ultra Music Festival Miami',
       'Electric Daisy Carnival Las Vegas',
       'Coachella Valley Music Festival',

@@ -183,7 +183,7 @@ const PsytrancePage = () => {
               <div className="text-gray-400">Infinite Journeys</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-violet-400 mb-2">50+</div>
+              <div className="text-3xl font-bold text-violet-400 mb-2">100+</div>
               <div className="text-gray-400">Festivals Played</div>
             </div>
             <div className="text-center">
