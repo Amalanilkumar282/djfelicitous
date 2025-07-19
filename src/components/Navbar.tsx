@@ -29,6 +29,7 @@ const Navbar: React.FC = () => {
     { href: '/bollywood', label: 'Bollywood' },
     { href: '/psytrance', label: 'Psy Trance' },
     { href: '/techno', label: 'Techno' },
+    { href: '/discography', label: 'Discography', highlight: true },
   ];
 
   return (
@@ -74,9 +75,18 @@ const Navbar: React.FC = () => {
                       className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 ${isActive
                           ? 'text-accent-primary'
                           : 'text-secondary hover:text-primary'
-                        }`}
+                        } ${link.highlight ? 'relative' : ''}`}
                     >
                       <span>{link.label}</span>
+                      
+                      {/* Special highlight for Discography */}
+                      {link.highlight && (
+                        <motion.div
+                          animate={{ scale: [1, 1.2, 1] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full opacity-75"
+                        />
+                      )}
 
                       {/* Active indicator */}
                       {isActive && (

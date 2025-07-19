@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { Play } from 'lucide-react';
 import { djProfiles } from '../data/djProfiles';
+import DiscographyCard from '../components/DiscographyCard';
 
 // Dynamically import components to avoid SSR issues
 const HeroSection = dynamic(() => import('../components/HeroSection').then(mod => ({ default: mod.default })), {
@@ -61,6 +63,42 @@ export default function Home() {
 
           {/* DJ Cards Grid */}
           <DJCardGrid profiles={djProfiles} />
+        </div>
+      </section>
+
+      {/* Enhanced Discography Section */}
+      <section className="section bg-gradient-to-b from-executive via-gray-900 to-black relative overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-300/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="section-title text-5xl md:text-6xl">
+              Musical <span className="text-accent bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent">Archive</span>
+            </h2>
+            <p className="section-subtitle text-xl mt-6 max-w-3xl mx-auto">
+              Discover the complete collection of original productions, reimagined classics, and exclusive collaborations
+            </p>
+            
+            {/* Decorative divider */}
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: '200px' }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-8"
+            />
+          </motion.div>
+
+          <DiscographyCard />
         </div>
       </section>
 
