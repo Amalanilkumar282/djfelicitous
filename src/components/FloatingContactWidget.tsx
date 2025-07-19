@@ -78,7 +78,7 @@ export default function FloatingContactWidget() {
       {/* Main Toggle Button */}
       <motion.button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="relative w-16 h-16 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+        className="relative w-12 h-12 bg-gradient-to-r from-cyan-500 to-emerald-500 hover:from-cyan-400 hover:to-emerald-400 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         animate={{
@@ -92,7 +92,7 @@ export default function FloatingContactWidget() {
           }}
           className="absolute"
         >
-          <Phone size={24} className="text-white" />
+          <Phone size={20} className="text-white" />
         </motion.div>
         
         <motion.div

@@ -4,9 +4,13 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Music, Instagram, Twitter, Youtube, Mail, MapPin } from 'lucide-react';
+import ContactOptionsModal from './ContactOptionsModal';
+import BookingModal from './BookingModal';
 
 const Footer: React.FC = () => {
   const [currentYear, setCurrentYear] = useState(2024);
+  const [showContactModal, setShowContactModal] = useState(false);
+  const [showBookingModal, setShowBookingModal] = useState(false);
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
@@ -146,11 +150,12 @@ const Footer: React.FC = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Link href="/contact">
-                <button className="btn-primary">
-                  BOOK YOUR EVENT
-                </button>
-              </Link>
+              <button 
+                onClick={() => setShowContactModal(true)}
+                className="btn-primary"
+              >
+                BOOK YOUR EVENT
+              </button>
             </motion.div>
           </div>
         </motion.div>
@@ -181,6 +186,24 @@ const Footer: React.FC = () => {
 
       {/* Professional accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-primary opacity-50" />
+
+      {/* Contact Modal */}
+      <ContactOptionsModal 
+        isOpen={showContactModal} 
+        onClose={() => setShowContactModal(false)}
+        onBookingFormOpen={() => {
+          setShowContactModal(false);
+          setShowBookingModal(true);
+        }}
+      />
+
+      {/* Booking Modal */}
+      <BookingModal 
+        isOpen={showBookingModal} 
+        onClose={() => setShowBookingModal(false)}
+        djName="DJ Felicitous"
+        djGenre="Multi-Genre"
+      />
     </footer>
   );
 };
