@@ -40,16 +40,9 @@ export const djProfiles: DJProfile[] = [
     color: 'neon-pink',
     route: '/couple-duo',
     featured: true,
-    bio: 'DJ Felicitous and DJ Geetz are not just partners in love, but also in music. Their unique chemistry creates an unparalleled energy on the dance floor, seamlessly blending genres and reading crowds like no other duo. With years of experience both individually and together, they bring a special magic to every event.',
+    bio: 'United by rhythm and passion, DJ Felicitous and DJ Geetz form a powerful couple duo that blends love and music into one unforgettable experience. From high-energy Bollywood bangers to South Indian chart-toppers, and late-night journeys into underground Techno, this dynamic pair brings versatility, chemistry, and crowd-moving magic to every set. With years of individual experience and a shared musical vision, their performances are more than just DJ sets-they\'re a celebration of connection, culture, and groove. Whether it\'s a big fat Indian wedding, a club night, or a private party, DJ Felicitous & DJ Geetz know how to read the crowd and deliver music that moves hearts and feet alike.',
     gigs: [
-      'Big pitcher Bengaluru',
-      'Ultra Music Festival Miami',
-      'Electric Daisy Carnival Las Vegas',
-      'Coachella Valley Music Festival',
-      'Burning Man 2023',
-      'Amnesia Ibiza',
-      'Fabric London',
-      'Berghain Berlin'
+      'Big pitcher Bengaluru'
     ],
     gallery: [
       '/images/couple-1.jpg',
@@ -86,7 +79,7 @@ export const djProfiles: DJProfile[] = [
     image: '/images/bollywood.jpg',
     color: 'neon-amber',
     route: '/bollywood',
-    bio: 'Specializing in Bollywood and commercial hits, DJ Felicitous brings the celebration of Indian culture to dance floors worldwide. With an extensive collection of the latest Bollywood bangers and classic hits, every set is a colorful journey through the best of Indian cinema music.',
+    bio: 'DJ Felicitous is a genre-fluid powerhouse who refuses to be boxed in. With an ear for global rhythms and a heart rooted in desi beats, Felicitous seamlessly blends Bollywood, South Indian hits, Techno, Commercial, and House into a high-energy sonic journey that keeps dancefloors buzzing. Whether it\'s a packed club, a destination wedding, or a private celebration, DJ Felicitous brings unmatched versatility, crowd-reading skills, and a deep connection to the vibe of every event. Each set is a dynamic story -crafted live, beat by beat, across genres and cultures.',
     gigs: [
       'Bollywood Music Awards After Party',
       'Diwali Festival London',
@@ -137,7 +130,7 @@ export const djProfiles: DJProfile[] = [
     image: '/images/psytrance.jpg',
     color: 'neon-purple',
     route: '/psytrance',
-    bio: 'As TinitroCosmic, the journey into the depths of consciousness begins. Specializing in psychedelic trance and progressive beats, every set is designed to take listeners on a transformative journey through space and time. The cosmic soundscapes and hypnotic rhythms create an otherworldly experience.',
+    bio: 'Trinitrocosmic is an immersive psytrance experience-born from chaos, crafted for consciousness expansion. Rooted in deep frequencies and mind-bending textures, this project takes listeners on a journey through the full spectrum of Psytrance sub-genres, from hypnotic Progressive to the shadowy realms of Dark Psy, Forest, frenetic Hi-Tech, and the raw power of Psycore. Each set is a ritual-designed to break boundaries, bend time, and ignite primal energy on the dancefloor. Whether under the stars or deep in a soundproof bunker, Trinitrocosmic delivers a psychedelic odyssey that fuses ancient mysticism with futuristic sound design.',
     gigs: [
       'Boom Festival Portugal',
       'Ozora Festival Hungary',
@@ -181,7 +174,7 @@ export const djProfiles: DJProfile[] = [
     image: '/images/techno.jpg',
     color: 'neon-cyan',
     route: '/techno',
-    bio: 'TNT represents the raw, uncompromising sound of underground techno. With a focus on industrial beats, driving basslines, and hypnotic rhythms, every set is an intense journey through the darker corners of electronic music. The sound is designed to shake foundations and move souls.',
+    bio: 'TNT is a cutting-edge techno project ignited by emotion and precision. With a core focus on Melodic Techno, TNT crafts immersive journeys through pulsating basslines, hypnotic melodies, and evolving soundscapes that resonate deep within. Exploring the full spectrum of Techno sub-genres from Peak-Time energy to Deep, Minimal, and Industrial textures-TNT\'s sets are designed to elevate dancefloors and captivate minds. It\'s not just music; it\'s a sonic narrative that connects body, soul, and space.',
     gigs: [
       'Berghain Berlin',
       'Awakenings Festival',
