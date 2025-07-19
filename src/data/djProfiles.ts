@@ -45,12 +45,12 @@ export const djProfiles: DJProfile[] = [
       'Big pitcher Bengaluru'
     ],
     gallery: [
-      '/images/couple-1.jpg',
+      '/images/couple-1.JPG',
       '/images/couple-2.jpg',
       '/images/couple-3.jpg',
       '/images/couple-4.jpg',
-      '/images/couple-5.jpg',
-      '/images/couple-6.jpg'
+      '/images/couple-duo.jpg',
+      '/images/couple-duo-hero.jpg'
     ],
     testimonials: [
       {
@@ -76,7 +76,7 @@ export const djProfiles: DJProfile[] = [
     subtitle: 'Bollywood & Commercial Specialist',
     description: 'Bringing the vibrant colors and infectious rhythms of Bollywood to the world.',
     genre: 'Bollywood / Commercial',
-    image: '/images/bollywood.jpg',
+    image: '/images/felicitous.jpg',
     color: 'neon-amber',
     route: '/bollywood',
     bio: 'DJ Felicitous is a genre-fluid powerhouse who refuses to be boxed in. With an ear for global rhythms and a heart rooted in desi beats, Felicitous seamlessly blends Bollywood, South Indian hits, Techno, Commercial, and House into a high-energy sonic journey that keeps dancefloors buzzing. Whether it\'s a packed club, a destination wedding, or a private celebration, DJ Felicitous brings unmatched versatility, crowd-reading skills, and a deep connection to the vibe of every event. Each set is a dynamic story -crafted live, beat by beat, across genres and cultures.',
@@ -91,10 +91,10 @@ export const djProfiles: DJProfile[] = [
       'Zee Cine Awards After Party'
     ],
     gallery: [
-      '/images/bollywood-1.jpg',
-      '/images/bollywood-2.jpg',
-      '/images/bollywood-3.jpg',
-      '/images/bollywood-4.jpg'
+      '/images/felicitous.jpg',
+      '/images/bollywood.jpg',
+      '/images/felicitous.jpg',
+      '/images/bollywood.jpg'
     ],
     playlists: [
       {
@@ -142,10 +142,10 @@ export const djProfiles: DJProfile[] = [
       'Cosmic Convergence Guatemala'
     ],
     gallery: [
-      '/images/psy-1.jpg',
-      '/images/psy-2.jpg',
-      '/images/psy-3.jpg',
-      '/images/psy-4.jpg'
+      '/images/psytrance.jpg',
+      '/images/psytrance.jpg',
+      '/images/psytrance.jpg',
+      '/images/psytrance.jpg'
     ],
     playlists: [
       {
@@ -186,10 +186,10 @@ export const djProfiles: DJProfile[] = [
       'Tresor Berlin'
     ],
     gallery: [
-      '/images/techno-1.jpg',
-      '/images/techno-2.jpg',
-      '/images/techno-3.jpg',
-      '/images/techno-4.jpg'
+      '/images/techno.jpg',
+      '/images/techno2.jpg',
+      '/images/techno.jpg',
+      '/images/techno2.jpg'
     ],
     playlists: [
       {

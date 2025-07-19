@@ -68,28 +68,28 @@ export const createPlaceholderImage = (
 // Simple placeholder images using SVG data URLs
 export const placeholderImages = {
   'couple-duo': '/images/couple-duo.jpg',
-  'bollywood': '/images/bollywood.jpg',
+  'bollywood': '/images/felicitous.jpg',
   'psytrance': '/images/psytrance.jpg',
   'techno': '/images/techno.jpg',
   
   // Gallery images for each DJ profile
   gallery: {
-    techno1: '/images/techno-1.jpg',
-    techno2: '/images/techno-2.jpg',
-    techno3: '/images/techno-3.jpg',
-    techno4: '/images/techno-4.jpg',
-    techno5: '/images/techno-5.jpg',
-    techno6: '/images/techno-6.jpg',
+    techno1: '/images/techno.jpg',
+    techno2: '/images/techno2.jpg',
+    techno3: '/images/techno.jpg',
+    techno4: '/images/techno2.jpg',
+    techno5: '/images/techno.jpg',
+    techno6: '/images/techno2.jpg',
 
-    psy1: '/images/psy-1.jpg',
-    psy2: '/images/psy-2.jpg',
-    psy3: '/images/psy-3.jpg',
+    psy1: '/images/psytrance.jpg',
+    psy2: '/images/psytrance.jpg',
+    psy3: '/images/psytrance.jpg',
 
-    bollywood1: '/images/bollywood-1.jpg',
-    bollywood2: '/images/bollywood-2.jpg',
-    bollywood3: '/images/bollywood-3.jpg',
+    bollywood1: '/images/felicitous.jpg',
+    bollywood2: '/images/bollywood.jpg',
+    bollywood3: '/images/felicitous.jpg',
 
-    couple1: '/images/couple-1.jpg',
+    couple1: '/images/couple-1.JPG',
     couple2: '/images/couple-2.jpg',
     couple3: '/images/couple-3.jpg'
   }
