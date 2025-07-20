@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Play, Instagram, Calendar, Star, Quote } from 'lucide-react';
-import { FaSoundcloud, FaSpotify, FaYoutube } from 'react-icons/fa';
+import { FaSoundcloud, FaYoutube } from 'react-icons/fa';
 import { getProfileByRoute } from '@/data/djProfiles';
 import FloatingContactWidget from '../../components/FloatingContactWidget';
 import ContactOptionsModal from '../../components/ContactOptionsModal';
@@ -187,17 +187,6 @@ export default function CoupleduoPage() {
                     className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center text-black"
                   >
                     <FaYoutube size={20} />
-                  </motion.a>
-                )}
-                {profile.social.spotify && (
-                  <motion.a
-                    href={`https://spotify.com/artist/${profile.social.spotify}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, rotate: 360 }}
-                    className="w-12 h-12 bg-gradient-to-r from-neon-lime to-neon-cyan rounded-full flex items-center justify-center text-black"
-                  >
-                    <FaSpotify size={20} />
                   </motion.a>
                 )}
               </div>

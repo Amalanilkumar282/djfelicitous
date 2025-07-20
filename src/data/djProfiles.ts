@@ -71,7 +71,7 @@ export const djProfiles: DJProfile[] = [
       }
     ],
     social: {
-      instagram: '@djfelicitous',
+      instagram: 'djfelicitous',
       soundcloud: 'https://on.soundcloud.com/QRZFMrkVEkwIJtFKGt',
       spotify: 'DJ Felicitous & DJ Geetz',
       youtube: 'https://youtube.com/@djfelicitous?si=NEjupxgPH7IZo0lD'
@@ -123,7 +123,7 @@ export const djProfiles: DJProfile[] = [
       }
     ],
     social: {
-      instagram: '@djfelicitous',
+      instagram: 'djfelicitous',
       soundcloud: 'https://on.soundcloud.com/QRZFMrkVEkwIJtFKGt',
       spotify: 'DJ Felicitous',
       youtube: 'https://youtube.com/@djfelicitous?si=NEjupxgPH7IZo0lD'
@@ -168,7 +168,7 @@ export const djProfiles: DJProfile[] = [
       }
     ],
     social: {
-      instagram: '@djfelicitous',
+      instagram: 'djfelicitous',
       soundcloud: 'https://on.soundcloud.com/QRZFMrkVEkwIJtFKGt',
       spotify: 'Tinitro Cosmic',
       youtube: 'https://youtube.com/@djfelicitous?si=NEjupxgPH7IZo0lD'
@@ -213,7 +213,7 @@ export const djProfiles: DJProfile[] = [
       }
     ],
     social: {
-      instagram: '@djfelicitous',
+      instagram: 'djfelicitous',
       soundcloud: 'https://on.soundcloud.com/QRZFMrkVEkwIJtFKGt',
       spotify: 'TNT',
       youtube: 'https://youtube.com/@djfelicitous?si=NEjupxgPH7IZo0lD'
