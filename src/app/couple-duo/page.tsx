@@ -228,7 +228,7 @@ export default function CoupleduoPage() {
             className="text-center mb-12"
           >
             <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 neon-cyan neon-text">
-              VENUES & FESTIVALS
+              RECENT VENUES & FESTIVALS
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From intimate venues to massive festivals, we&apos;ve brought our unique energy to stages worldwide

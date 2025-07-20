@@ -42,7 +42,13 @@ export const djProfiles: DJProfile[] = [
     featured: true,
     bio: 'United by rhythm and passion, DJ Felicitous and DJ Geetz form a powerful couple duo that blends love and music into one unforgettable experience. From high-energy Bollywood bangers to South Indian chart-toppers, and late-night journeys into underground Techno, this dynamic pair brings versatility, chemistry, and crowd-moving magic to every set. With years of individual experience and a shared musical vision, their performances are more than just DJ sets-they\'re a celebration of connection, culture, and groove. Whether it\'s a big fat Indian wedding, a club night, or a private party, DJ Felicitous & DJ Geetz know how to read the crowd and deliver music that moves hearts and feet alike.',
     gigs: [
-      'Big pitcher Bengaluru'
+      'Big Pitcher Bangalore', 
+      'Pebbles Bangalore', 
+      'Ashva Bangalore', 
+      'XU Fashion Bar Kitchen Bangalore', 
+      'BLR Brew Bangalore', 
+      'Up and Peace Himachal Pradesh', 
+      'Pyramid Elante Chandigarh'
     ],
     gallery: [
       '/images/couple-1.JPG',
