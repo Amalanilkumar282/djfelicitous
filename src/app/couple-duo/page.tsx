@@ -7,9 +7,14 @@ import { ArrowLeft, Play, Instagram, Calendar, Star, Quote } from 'lucide-react'
 import { FaSoundcloud, FaSpotify } from 'react-icons/fa';
 import { getProfileByRoute } from '@/data/djProfiles';
 import FloatingContactWidget from '../../components/FloatingContactWidget';
+import ContactOptionsModal from '../../components/ContactOptionsModal';
+import BookingModal from '../../components/BookingModal';
+import { useState } from 'react';
 
 export default function CoupleduoPage() {
   const profile = getProfileByRoute('/couple-duo');
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   if (!profile) {
     return <div>Profile not found</div>;
@@ -19,6 +24,24 @@ export default function CoupleduoPage() {
     <div className="min-h-screen pt-20 bg-executive-platinum">
       {/* Floating Contact Widget */}
       <FloatingContactWidget />
+
+      {/* Contact Options Modal */}
+      <ContactOptionsModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        onBookingFormOpen={() => {
+          setIsContactModalOpen(false);
+          setIsBookingModalOpen(true);
+        }}
+      />
+
+      {/* Booking Modal */}
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        djName={profile.name}
+        djGenre={profile.genre}
+      />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -78,20 +101,23 @@ export default function CoupleduoPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold text-lg px-8 py-4 rounded-lg shadow-executive-medium hover:shadow-executive-glow transition-all"
-              >
-                <span className="flex items-center space-x-2">
-                  <Play size={20} />
-                  <span>LISTEN TO OUR SETS</span>
-                </span>
-              </motion.button>
+              <Link href="/discography">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold text-lg px-8 py-4 rounded-lg shadow-executive-medium hover:shadow-executive-glow transition-all"
+                >
+                  <span className="flex items-center space-x-2">
+                    <Play size={20} />
+                    <span>LISTEN TO OUR SETS</span>
+                  </span>
+                </motion.button>
+              </Link>
               
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => setIsContactModalOpen(true)}
                 className="border-2 border-executive-teal text-executive-teal font-bold text-lg px-8 py-4 rounded-lg hover:bg-executive-teal/10 transition-all shadow-executive-subtle"
               >
                 BOOK THE DUO
