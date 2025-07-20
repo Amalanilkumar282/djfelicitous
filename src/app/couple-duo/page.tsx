@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Play, Instagram, Calendar, Star, Quote } from 'lucide-react';
-import { FaSoundcloud, FaSpotify } from 'react-icons/fa';
+import { FaSoundcloud, FaSpotify, FaYoutube } from 'react-icons/fa';
 import { getProfileByRoute } from '@/data/djProfiles';
 import FloatingContactWidget from '../../components/FloatingContactWidget';
 import ContactOptionsModal from '../../components/ContactOptionsModal';
@@ -158,7 +158,7 @@ export default function CoupleduoPage() {
               <div className="flex space-x-4">
                 {profile.social.instagram && (
                   <motion.a
-                    href={`https://instagram.com/${profile.social.instagram}`}
+                    href={profile.social.instagram.startsWith('@') ? `https://instagram.com/${profile.social.instagram}` : `https://instagram.com/${profile.social.instagram}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, rotate: 360 }}
@@ -169,13 +169,24 @@ export default function CoupleduoPage() {
                 )}
                 {profile.social.soundcloud && (
                   <motion.a
-                    href={`https://soundcloud.com/${profile.social.soundcloud}`}
+                    href={profile.social.soundcloud.startsWith('http') ? profile.social.soundcloud : `https://soundcloud.com/${profile.social.soundcloud}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, rotate: 360 }}
                     className="w-12 h-12 bg-gradient-to-r from-neon-pink to-neon-amber rounded-full flex items-center justify-center text-black"
                   >
                     <FaSoundcloud size={20} />
+                  </motion.a>
+                )}
+                {profile.social.youtube && (
+                  <motion.a
+                    href={profile.social.youtube.startsWith('http') ? profile.social.youtube : `https://youtube.com/${profile.social.youtube}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1, rotate: 360 }}
+                    className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center text-black"
+                  >
+                    <FaYoutube size={20} />
                   </motion.a>
                 )}
                 {profile.social.spotify && (

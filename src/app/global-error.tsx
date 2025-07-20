@@ -92,7 +92,7 @@ export default function GlobalError({
                 <p className="text-text-muted text-sm">
                   If the problem persists, please{' '}
                   <a 
-                    href="mailto:support@djfelicitous.com" 
+                    href="mailto:felicitousdj@gmail.com" 
                     className="text-electric-cyan hover:text-electric-orange transition-colors underline"
                   >
                     contact support

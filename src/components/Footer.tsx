@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Music, Instagram, Twitter, Youtube, Mail, MapPin } from 'lucide-react';
+import { Music, Instagram, Youtube, Mail, MapPin } from 'lucide-react';
+import { FaSoundcloud } from 'react-icons/fa';
 import ContactOptionsModal from './ContactOptionsModal';
 import BookingModal from './BookingModal';
 
@@ -51,10 +52,10 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Instagram, href: 'https://instagram.com/djfelicitous', label: 'Instagram' },
-    { icon: Twitter, href: 'https://twitter.com/djfelicitous', label: 'Twitter' },
-    { icon: Youtube, href: 'https://youtube.com/djfelicitous', label: 'YouTube' },
-    { icon: Mail, href: 'mailto:booking@djfelicitous.com', label: 'Email' },
+    { icon: Instagram, href: 'http://www.instagram.com/djfelicitous', label: 'Instagram' },
+    { icon: FaSoundcloud, href: 'https://on.soundcloud.com/QRZFMrkVEkwIJtFKGt', label: 'SoundCloud' },
+    { icon: Youtube, href: 'https://youtube.com/@djfelicitous?si=NEjupxgPH7IZo0lD', label: 'YouTube' },
+    { icon: Mail, href: 'mailto:felicitousdj@gmail.com', label: 'Email' },
   ];
 
   return (

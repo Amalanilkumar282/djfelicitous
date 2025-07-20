@@ -71,9 +71,10 @@ export const djProfiles: DJProfile[] = [
       }
     ],
     social: {
-      instagram: '@djfelicitousgeetz',
-      soundcloud: 'djfelicitousgeetz',
-      spotify: 'DJ Felicitous & DJ Geetz'
+      instagram: '@djfelicitous',
+      soundcloud: 'https://on.soundcloud.com/QRZFMrkVEkwIJtFKGt',
+      spotify: 'DJ Felicitous & DJ Geetz',
+      youtube: 'https://youtube.com/@djfelicitous?si=NEjupxgPH7IZo0lD'
     }
   },
   {
@@ -122,9 +123,10 @@ export const djProfiles: DJProfile[] = [
       }
     ],
     social: {
-      instagram: '@djfelicitous_bollywood',
-      soundcloud: 'djfelicitous',
-      spotify: 'DJ Felicitous'
+      instagram: '@djfelicitous',
+      soundcloud: 'https://on.soundcloud.com/QRZFMrkVEkwIJtFKGt',
+      spotify: 'DJ Felicitous',
+      youtube: 'https://youtube.com/@djfelicitous?si=NEjupxgPH7IZo0lD'
     }
   },
   {
@@ -166,9 +168,10 @@ export const djProfiles: DJProfile[] = [
       }
     ],
     social: {
-      instagram: '@tinitrocosmic',
-      soundcloud: 'tinitrocosmic',
-      spotify: 'Tinitro Cosmic'
+      instagram: '@djfelicitous',
+      soundcloud: 'https://on.soundcloud.com/QRZFMrkVEkwIJtFKGt',
+      spotify: 'Tinitro Cosmic',
+      youtube: 'https://youtube.com/@djfelicitous?si=NEjupxgPH7IZo0lD'
     }
   },
   {
@@ -210,9 +213,10 @@ export const djProfiles: DJProfile[] = [
       }
     ],
     social: {
-      instagram: '@tnt_techno',
-      soundcloud: 'tnt-techno',
-      spotify: 'TNT'
+      instagram: '@djfelicitous',
+      soundcloud: 'https://on.soundcloud.com/QRZFMrkVEkwIJtFKGt',
+      spotify: 'TNT',
+      youtube: 'https://youtube.com/@djfelicitous?si=NEjupxgPH7IZo0lD'
     }
   }
 ];
