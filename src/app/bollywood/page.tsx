@@ -152,11 +152,11 @@ const BollywoodPage = () => {
             variants={itemVariants}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-executive-teal mb-2">5+</div>
+              <div className="text-3xl font-bold text-executive-teal mb-2">10+</div>
               <div className="text-executive-chrome-dark">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-executive-accent mb-2">100+</div>
+              <div className="text-3xl font-bold text-executive-accent mb-2">500+</div>
               <div className="text-executive-chrome-dark">Events Played</div>
             </div>
             <div className="text-center">
