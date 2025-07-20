@@ -60,14 +60,14 @@ export const djProfiles: DJProfile[] = [
     ],
     testimonials: [
       {
-        name: 'Sarah & Mike',
+        name: 'Soorej Basil Joseph',
         text: 'They made our wedding absolutely magical! The energy they brought was incredible.',
         venue: 'Private Wedding'
       },
       {
         name: 'Club Manager',
         text: 'Best duo act we\'ve ever booked. They know how to work a crowd!',
-        venue: 'Ministry of Sound'
+        venue: 'Ashva Resto Hangouts'
       }
     ],
     social: {

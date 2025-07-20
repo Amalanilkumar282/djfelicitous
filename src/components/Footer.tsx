@@ -28,6 +28,8 @@ const Footer: React.FC = () => {
     },
     {
       title: 'Services',
+      isSpecial: true, // Mark this section as special for different rendering
+      promotionalText: "Loved what you saw? Let's make your next event unforgettable. Reach out now!",
       links: [
         { name: 'Wedding Events', href: '/services/weddings' },
         { name: 'Corporate Events', href: '/services/corporate' },
@@ -102,15 +104,39 @@ const Footer: React.FC = () => {
               <h3 className="font-space-grotesk font-semibold text-white text-lg">
                 {section.title}
               </h3>
+              
+              {/* Add promotional text for Services section */}
+              {section.isSpecial && (
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-accent text-sm font-medium leading-relaxed bg-gradient-to-r from-accent/20 to-electric-cyan/20 p-3 rounded-lg border border-accent/30"
+                >
+                  {section.promotionalText}
+                </motion.p>
+              )}
+              
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-text-muted hover:text-electric-cyan transition-colors text-sm block py-1"
-                    >
-                      {link.name}
-                    </Link>
+                    {section.isSpecial ? (
+                      // For Services section, make clickable to open contact modal
+                      <button
+                        onClick={() => setShowContactModal(true)}
+                        className="text-text-muted hover:text-electric-cyan transition-colors text-sm block py-1 text-left w-full hover:pl-2 hover:bg-electric-cyan/10 rounded transition-all duration-300"
+                      >
+                        {link.name}
+                      </button>
+                    ) : (
+                      // For other sections, keep as normal links
+                      <Link
+                        href={link.href}
+                        className="text-text-muted hover:text-electric-cyan transition-colors text-sm block py-1"
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
