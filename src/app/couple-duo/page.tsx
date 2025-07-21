@@ -235,7 +235,7 @@ export default function CoupleduoPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {profile.gigs.map((gig, index) => (
               <motion.div
                 key={index}
@@ -243,13 +243,13 @@ export default function CoupleduoPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-black/50 backdrop-blur-md border border-neon-pink/30 rounded-lg p-6 text-center"
+                className="bg-black/50 backdrop-blur-md border border-neon-pink/30 rounded-lg p-4 text-center min-h-[120px] flex flex-col justify-center"
               >
-                <Calendar className="w-8 h-8 text-neon-pink mx-auto mb-4" />
-                <h3 className="font-semibold text-lg mb-2">{gig}</h3>
-                <div className="flex items-center justify-center space-x-1 text-yellow-400">
+                <Calendar className="w-6 h-6 text-neon-pink mx-auto mb-3 flex-shrink-0" />
+                <h3 className="font-medium text-sm mb-2 break-words hyphens-auto leading-snug px-1">{gig}</h3>
+                <div className="flex items-center justify-center space-x-1 text-yellow-400 flex-shrink-0">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} fill="currentColor" />
+                    <Star key={i} size={14} fill="currentColor" />
                   ))}
                 </div>
               </motion.div>
