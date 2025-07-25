@@ -60,14 +60,14 @@ export const djProfiles: DJProfile[] = [
     ],
     testimonials: [
       {
-        name: 'Soorej Basil Joseph',
-        text: 'They made our wedding absolutely magical! The energy they brought was incredible.',
-        venue: 'Private Wedding'
+        name: 'Rajesh Kumar',
+        text: 'They made our anniversary party absolutely unforgettable! Everyone was dancing till 3 AM.',
+        venue: 'Private Anniversary Celebration'
       },
       {
-        name: 'Club Manager',
-        text: 'Best duo act we\'ve ever booked. They know how to work a crowd!',
-        venue: 'Ashva Resto Hangouts'
+        name: 'Priya Menon',
+        text: 'Best DJ duo we\'ve ever hired! They perfectly balanced our multicultural guest list with amazing music selection.',
+        venue: 'Private Birthday Party'
       }
     ],
     social: {
@@ -117,9 +117,14 @@ export const djProfiles: DJProfile[] = [
     ],
     testimonials: [
       {
-        name: 'Priya Sharma',
-        text: 'Finally, a DJ who understands Bollywood music! Perfect for our sangeet.',
-        venue: 'Private Event'
+        name: 'Arjun Sharma',
+        text: 'DJ Felicitous made our family function absolutely spectacular! Perfect mix of Bollywood classics and modern hits.',
+        venue: 'Private Housewarming Party'
+      },
+      {
+        name: 'Kavya Reddy',
+        text: 'Incredible energy and music selection! Our guests are still talking about how amazing the party was.',
+        venue: 'Private Engagement Celebration'
       }
     ],
     social: {
@@ -140,14 +145,10 @@ export const djProfiles: DJProfile[] = [
     route: '/psytrance',
     bio: 'Trinitrocosmic is an immersive psytrance experience-born from chaos, crafted for consciousness expansion. Rooted in deep frequencies and mind-bending textures, this project takes listeners on a journey through the full spectrum of Psytrance sub-genres, from hypnotic Progressive to the shadowy realms of Dark Psy, Forest, frenetic Hi-Tech, and the raw power of Psycore. Each set is a ritual-designed to break boundaries, bend time, and ignite primal energy on the dancefloor. Whether under the stars or deep in a soundproof bunker, Trinitrocosmic delivers a psychedelic odyssey that fuses ancient mysticism with futuristic sound design.',
     gigs: [
-      'Boom Festival Portugal',
-      'Ozora Festival Hungary',
-      'Psy-Fi Festival Netherlands',
-      'Rainbow Serpent Australia',
-      'Universo Paralello Brazil',
-      'Antaris Project Germany',
-      'Hadra Trance Festival France',
-      'Cosmic Convergence Guatemala'
+      'XU Fashion Bar Kitchen, Leela Palace',
+      'Pebbles Bangalore',
+      'Up and Peace Himachal Pradesh',
+      'BLR Brew Bangalore'
     ],
     gallery: [
       '/images/psytrance.jpg',
@@ -165,6 +166,18 @@ export const djProfiles: DJProfile[] = [
         name: 'Psychedelic Sunrise',
         url: 'https://spotify.com/playlist/psychedelic-sunrise',
         platform: 'Spotify'
+      }
+    ],
+    testimonials: [
+      {
+        name: 'Vikram Agarwal',
+        text: 'TinitroCosmic took us on an incredible psychedelic journey! Perfect for our meditation retreat after-party.',
+        venue: 'Private Retreat Celebration'
+      },
+      {
+        name: 'Meera Joshi',
+        text: 'Mind-blowing experience! The cosmic vibes were exactly what we needed for our spiritual gathering.',
+        venue: 'Private Spiritual Event'
       }
     ],
     social: {
@@ -185,14 +198,8 @@ export const djProfiles: DJProfile[] = [
     route: '/techno',
     bio: 'TNT is a cutting-edge techno project ignited by emotion and precision. With a core focus on Melodic Techno, TNT crafts immersive journeys through pulsating basslines, hypnotic melodies, and evolving soundscapes that resonate deep within. Exploring the full spectrum of Techno sub-genres from Peak-Time energy to Deep, Minimal, and Industrial textures-TNT\'s sets are designed to elevate dancefloors and captivate minds. It\'s not just music; it\'s a sonic narrative that connects body, soul, and space.',
     gigs: [
-      'Berghain Berlin',
-      'Awakenings Festival',
-      'Time Warp Mannheim',
-      'Dekmantel Festival',
-      'Movement Detroit',
-      'Sonar Barcelona',
-      'Fabric London Room 1',
-      'Tresor Berlin'
+      'Pebbles, Bangalore',
+      'XU Fashion Bar Kitchen, Leela Palace Bangalore'
     ],
     gallery: [
       '/images/techno.jpg',
@@ -210,6 +217,18 @@ export const djProfiles: DJProfile[] = [
         name: 'Industrial Mayhem',
         url: 'https://spotify.com/playlist/industrial-mayhem',
         platform: 'Spotify'
+      }
+    ],
+    testimonials: [
+      {
+        name: 'Rohit Bansal',
+        text: 'TNT brought raw underground energy to our corporate after-party! The techno beats had everyone moving.',
+        venue: 'Private Corporate Event'
+      },
+      {
+        name: 'Neha Iyer',
+        text: 'Absolutely incredible! The industrial techno vibe was perfect for our late-night private celebration.',
+        venue: 'Private House Party'
       }
     ],
     social: {
