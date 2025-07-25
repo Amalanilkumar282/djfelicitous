@@ -195,7 +195,7 @@ const BollywoodPage = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src={placeholderImages.bollywood}
+                  src={image}
                   alt={`Gallery image ${index + 1}`}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"

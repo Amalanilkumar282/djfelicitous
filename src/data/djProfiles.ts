@@ -96,10 +96,10 @@ export const djProfiles: DJProfile[] = [
       'Clubbers Friday - BigPitcher Sarjapur'
     ],
     gallery: [
-      '/images/felicitous.jpg',
-      '/images/bollywood.jpg',
-      '/images/felicitous.jpg',
-      '/images/bollywood.jpg'
+      '/images/bollywood1.jpg',
+      '/images/bollywood2.jpg',
+      '/images/bollywood3.jpg',
+      '/images/bollywood4.jpg'
     ],
     playlists: [
       {
