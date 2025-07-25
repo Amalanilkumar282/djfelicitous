@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Star, ExternalLink, Zap } from 'lucide-react';
+import { Calendar, Star, ExternalLink, Zap } from 'lucide-react';
 import { djProfiles } from '@/data/djProfiles';
 import { placeholderImages } from '@/utils/placeholders';
 import Link from 'next/link';
@@ -270,11 +270,7 @@ const PsytrancePage = () => {
                     <div className="flex flex-wrap gap-4 text-gray-300">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4 text-purple-400" />
-                        <span>2023-2024</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-purple-400" />
-                        <span>Worldwide</span>
+                        <span>2025</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Zap className="w-4 h-4 text-purple-400" />

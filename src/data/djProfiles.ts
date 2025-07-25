@@ -88,14 +88,12 @@ export const djProfiles: DJProfile[] = [
     route: '/bollywood',
     bio: 'DJ Felicitous is a genre-fluid powerhouse who refuses to be boxed in. With an ear for global rhythms and a heart rooted in desi beats, Felicitous seamlessly blends Bollywood, South Indian hits, Techno, Commercial, and House into a high-energy sonic journey that keeps dancefloors buzzing. Whether it\'s a packed club, a destination wedding, or a private celebration, DJ Felicitous brings unmatched versatility, crowd-reading skills, and a deep connection to the vibe of every event. Each set is a dynamic story -crafted live, beat by beat, across genres and cultures.',
     gigs: [
-      'Bollywood Music Awards After Party',
-      'Diwali Festival London',
-      'Mumbai Underground',
-      'Bhangra Nights NYC',
-      'India Day Parade Official DJ',
-      'Wedding Season Tours 2023',
-      'Holi Festival Main Stage',
-      'Zee Cine Awards After Party'
+      'Bolly-Tech - Ashva Resto Hangouts',
+      'Sonic Saturday - Ashva Resto Hangouts',
+      'Housefull Sunday - BigPitcher Sarjapur',
+      'Big Bollywood Night - BigPitcher Sarjapur',
+      'Wonder Woman - Big Pitcher Sarjapur',
+      'Clubbers Friday - BigPitcher Sarjapur'
     ],
     gallery: [
       '/images/felicitous.jpg',
@@ -117,12 +115,12 @@ export const djProfiles: DJProfile[] = [
     ],
     testimonials: [
       {
-        name: 'Arjun Sharma',
+        name: 'Ankit Sharma',
         text: 'DJ Felicitous made our family function absolutely spectacular! Perfect mix of Bollywood classics and modern hits.',
         venue: 'Private Housewarming Party'
       },
       {
-        name: 'Kavya Reddy',
+        name: 'Sneha Reddy',
         text: 'Incredible energy and music selection! Our guests are still talking about how amazing the party was.',
         venue: 'Private Engagement Celebration'
       }
@@ -145,9 +143,9 @@ export const djProfiles: DJProfile[] = [
     route: '/psytrance',
     bio: 'Trinitrocosmic is an immersive psytrance experience-born from chaos, crafted for consciousness expansion. Rooted in deep frequencies and mind-bending textures, this project takes listeners on a journey through the full spectrum of Psytrance sub-genres, from hypnotic Progressive to the shadowy realms of Dark Psy, Forest, frenetic Hi-Tech, and the raw power of Psycore. Each set is a ritual-designed to break boundaries, bend time, and ignite primal energy on the dancefloor. Whether under the stars or deep in a soundproof bunker, Trinitrocosmic delivers a psychedelic odyssey that fuses ancient mysticism with futuristic sound design.',
     gigs: [
-      'XU Fashion Bar Kitchen, Leela Palace',
-      'Pebbles Bangalore',
-      'Up and Peace Himachal Pradesh',
+      'XU Fashion Bar Kitchen',
+      'Pebbles Bangalore', 
+      'Up and Peace Himachal Pradesh', 
       'BLR Brew Bangalore'
     ],
     gallery: [
@@ -170,12 +168,12 @@ export const djProfiles: DJProfile[] = [
     ],
     testimonials: [
       {
-        name: 'Vikram Agarwal',
+        name: 'Rahul Agarwal',
         text: 'TinitroCosmic took us on an incredible psychedelic journey! Perfect for our meditation retreat after-party.',
         venue: 'Private Retreat Celebration'
       },
       {
-        name: 'Meera Joshi',
+        name: 'Ishita Joshi',
         text: 'Mind-blowing experience! The cosmic vibes were exactly what we needed for our spiritual gathering.',
         venue: 'Private Spiritual Event'
       }
@@ -221,12 +219,12 @@ export const djProfiles: DJProfile[] = [
     ],
     testimonials: [
       {
-        name: 'Rohit Bansal',
+        name: 'Karan Bansal',
         text: 'TNT brought raw underground energy to our corporate after-party! The techno beats had everyone moving.',
         venue: 'Private Corporate Event'
       },
       {
-        name: 'Neha Iyer',
+        name: 'Riya Iyer',
         text: 'Absolutely incredible! The industrial techno vibe was perfect for our late-night private celebration.',
         venue: 'Private House Party'
       }
