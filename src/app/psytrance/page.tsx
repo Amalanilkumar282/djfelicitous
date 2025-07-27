@@ -324,9 +324,6 @@ const PsytrancePage = () => {
                       </div>
                     </div>
                   </div>
-                  <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold rounded-lg hover:scale-105 transition-transform duration-300">
-                    Experience
-                  </button>
                 </div>
               </motion.div>
             ))}

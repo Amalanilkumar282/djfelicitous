@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Play, Pause, ExternalLink, Calendar, Clock, Heart, Eye } from 'lucide-react';
 import { discography, albums } from '../../data/discography';
-import QuickAccessWidget from '../../components/QuickAccessWidget';
 import FloatingContactWidget from '../../components/FloatingContactWidget';
 import SoundCloudPlayer from '../../components/SoundCloudPlayer';
 
@@ -40,9 +39,6 @@ export default function DiscographyPage() {
 
   return (
     <div className="min-h-screen bg-executive pt-20 relative">
-      {/* Quick Access Widget */}
-      <QuickAccessWidget />
-
       {/* Floating Contact Widget */}
       <FloatingContactWidget />
 

@@ -363,9 +363,6 @@ const TechnoPage = () => {
                       </div>
                     </div>
                   </div>
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold font-mono hover:scale-105 transition-transform duration-300">
-                    ACCESS
-                  </button>
                 </div>
               </motion.div>
             ))}

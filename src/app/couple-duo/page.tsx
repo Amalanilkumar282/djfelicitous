@@ -55,8 +55,8 @@ export default function CoupleduoPage() {
             priority
           />
           {/* Enhanced dark overlay for better content visibility */}
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-executive-charcoal/80 via-executive-charcoal/30 to-transparent" />
+          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-executive-charcoal/90 via-executive-charcoal/50 to-black/60" />
         </div>
 
         {/* Professional Accent Elements */}
@@ -134,17 +134,6 @@ export default function CoupleduoPage() {
             </div>
           </motion.div>
         </div>
-
-        {/* Back Button */}
-        <Link href="/">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="absolute top-24 left-6 z-20 w-12 h-12 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-neon-pink border border-neon-pink hover:bg-neon-pink hover:text-black transition-all"
-          >
-            <ArrowLeft size={20} />
-          </motion.button>
-        </Link>
       </section>
 
       {/* Bio Section */}
