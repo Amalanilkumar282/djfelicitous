@@ -273,27 +273,24 @@ const BollywoodPage = () => {
             {profile.gigs.slice(0, 6).map((gig, index) => (
               <motion.div
                 key={index}
-                className="bg-white/80 backdrop-blur-executive border border-executive-chrome/30 rounded-lg p-6 shadow-executive-medium hover:shadow-executive-strong transition-all duration-300"
+                className="bg-gradient-to-br from-pink-900/20 to-orange-900/20 backdrop-blur-sm border border-pink-400/30 rounded-lg p-6 shadow-executive-medium hover:shadow-executive-strong transition-all duration-300"
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div className="flex flex-col gap-4">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-executive-charcoal mb-2">{gig}</h3>
-                    <div className="flex flex-wrap gap-4 text-executive-slate">
+                    <h3 className="text-2xl font-bold text-pink-300 mb-2">{gig}</h3>
+                    <div className="flex flex-wrap gap-4 text-gray-300">
                       <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-executive-teal" />
+                        <Calendar className="w-4 h-4 text-pink-400" />
                         <span>2025</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-executive-teal" />
+                        <Users className="w-4 h-4 text-pink-400" />
                         <span>Live Performance</span>
                       </div>
                     </div>
                   </div>
-                  <button className="px-6 py-3 bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold rounded-lg hover:scale-105 transition-transform duration-300 shadow-executive-medium hover:shadow-executive-glow">
-                    View More
-                  </button>
                 </div>
               </motion.div>
             ))}
