@@ -70,7 +70,7 @@ const DJCard: React.FC<DJCardProps> = ({ profile, featured = false }) => {
 
           {/* Enhanced Featured Badge */}
           {featured && (
-            <div className="absolute top-4 right-20">
+            <div className="absolute bottom-4 left-4">
               <motion.span 
                 animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
