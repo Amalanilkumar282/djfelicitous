@@ -226,7 +226,7 @@ const PsytrancePage = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src={placeholderImages.psytrance}
+                  src={image}
                   alt={`Cosmic journey ${index + 1}`}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"

@@ -261,7 +261,7 @@ const TechnoPage = () => {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src={placeholderImages.techno}
+                  src={image}
                   alt={`Underground session ${index + 1}`}
                   fill
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"

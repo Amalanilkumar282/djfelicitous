@@ -99,7 +99,8 @@ export const djProfiles: DJProfile[] = [
       '/images/bollywood1.jpg',
       '/images/bollywood2.jpg',
       '/images/bollywood3.jpg',
-      '/images/bollywood4.jpg'
+      '/images/bollywood4.jpg',
+      '/images/bollywood5.jpg'
     ],
     playlists: [
       {
@@ -149,10 +150,11 @@ export const djProfiles: DJProfile[] = [
       'BLR Brew Bangalore'
     ],
     gallery: [
-      '/images/psytrance.jpg',
-      '/images/psytrance.jpg',
-      '/images/psytrance.jpg',
-      '/images/psytrance.jpg'
+      '/images/psy1.jpg',
+      '/images/psy2.jpg',
+      '/images/psy3.jpg',
+      '/images/psy4.jpg',
+      '/images/psy5.JPG'
     ],
     playlists: [
       {
@@ -200,10 +202,11 @@ export const djProfiles: DJProfile[] = [
       'XU Fashion Bar Kitchen, Leela Palace Bangalore'
     ],
     gallery: [
-      '/images/techno.jpg',
+      '/images/techno1.jpg',
       '/images/techno2.jpg',
-      '/images/techno.jpg',
-      '/images/techno2.jpg'
+      '/images/techno3.jpg',
+      '/images/techno4.jpg',
+      '/images/techno5.jpg'
     ],
     playlists: [
       {
