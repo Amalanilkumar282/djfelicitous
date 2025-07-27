@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "DJ Felicitous",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "DJ Felicitous - Electronic Music Producer",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DJ Felicitous | Multi-Genre DJ & Producer",
     description: "Experience the electrifying world of DJ Felicitous - from underground techno to vibrant Bollywood beats.",
-    images: ["/images/og-image.jpg"],
+    images: ["/logo.png"],
     creator: "@djfelicitous",
   },
   robots: {

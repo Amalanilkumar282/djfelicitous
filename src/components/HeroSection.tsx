@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
           <source src="/images/herobg.mp4" type="video/mp4" />
           {/* Fallback image for browsers that don't support video */}
           <Image
-            src="/images/hero.jpg"
+            src="/logo.png"
             alt="DJ Felicitous Hero Background"
             fill
             className="object-cover"
