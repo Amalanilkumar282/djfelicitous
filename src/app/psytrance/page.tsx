@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Star, ExternalLink, Zap } from 'lucide-react';
 import { djProfiles } from '@/data/djProfiles';
@@ -7,9 +8,13 @@ import { placeholderImages } from '@/utils/placeholders';
 import Link from 'next/link';
 import Image from 'next/image';
 import FloatingContactWidget from '../../components/FloatingContactWidget';
+import ContactOptionsModal from '../../components/ContactOptionsModal';
+import BookingModal from '../../components/BookingModal';
 
 const PsytrancePage = () => {
   const profile = djProfiles.find(dj => dj.id === 'psytrance')!;
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -48,6 +53,24 @@ const PsytrancePage = () => {
     <div className="min-h-screen pt-20 bg-executive-platinum text-executive-charcoal overflow-hidden">
       {/* Floating Contact Widget */}
       <FloatingContactWidget />
+
+      {/* Contact Options Modal */}
+      <ContactOptionsModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        onBookingFormOpen={() => {
+          setIsContactModalOpen(false);
+          setIsBookingModalOpen(true);
+        }}
+      />
+
+      {/* Booking Modal */}
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        djName="TinitroCosmic"
+        djGenre="Psytrance"
+      />
 
       {/* Professional Background */}
       <div className="fixed inset-0 z-0">
@@ -119,13 +142,36 @@ const PsytrancePage = () => {
               className="flex gap-4 justify-center lg:justify-start"
               variants={itemVariants}
             >
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold rounded-lg neon-glow hover:scale-105 transition-transform duration-300 flex items-center gap-2">
+              <motion.button
+                onClick={() => setIsContactModalOpen(true)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 relative overflow-hidden group"
+              >
                 <Zap className="w-5 h-5" />
-                Enter the Journey
-              </button>
-              <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-bold rounded-lg hover:bg-purple-400/10 transition-colors duration-300">
-                Cosmic Mixes
-              </button>
+                <span>Enter the Journey</span>
+                <motion.div
+                  animate={{
+                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent bg-[length:200%_100%]"
+                />
+              </motion.button>
+              <Link href="/discography">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-bold rounded-lg hover:bg-purple-400/10 transition-colors duration-300 flex items-center gap-2"
+                >
+                  Cosmic Mixes
+                  <ExternalLink className="w-4 h-4" />
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -396,10 +442,15 @@ const PsytrancePage = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={itemVariants}
           >
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold rounded-lg neon-glow hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2">
+            <motion.button
+              onClick={() => setIsContactModalOpen(true)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2"
+            >
               <Zap className="w-5 h-5" />
               Book Cosmic Journey
-            </button>
+            </motion.button>
             <Link
               href="/"
               className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-bold rounded-lg hover:bg-purple-400/10 transition-colors duration-300 inline-flex items-center justify-center gap-2"

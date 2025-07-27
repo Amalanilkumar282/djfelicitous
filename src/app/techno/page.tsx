@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Star, ExternalLink, Volume2 } from 'lucide-react';
 import { djProfiles } from '@/data/djProfiles';
@@ -7,9 +8,13 @@ import { placeholderImages } from '@/utils/placeholders';
 import Link from 'next/link';
 import Image from 'next/image';
 import FloatingContactWidget from '../../components/FloatingContactWidget';
+import ContactOptionsModal from '../../components/ContactOptionsModal';
+import BookingModal from '../../components/BookingModal';
 
 const TechnoPage = () => {
   const profile = djProfiles.find(dj => dj.id === 'techno')!;
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   // Sample gallery images
 //   const galleryImages = [
@@ -80,6 +85,24 @@ const TechnoPage = () => {
     <div className="min-h-screen pt-20 bg-black text-white overflow-hidden">
       {/* Floating Contact Widget */}
       <FloatingContactWidget />
+
+      {/* Contact Options Modal */}
+      <ContactOptionsModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+        onBookingFormOpen={() => {
+          setIsContactModalOpen(false);
+          setIsBookingModalOpen(true);
+        }}
+      />
+
+      {/* Booking Modal */}
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        djName="TNT"
+        djGenre="Techno"
+      />
 
       {/* Animated Background */}
       <div className="fixed inset-0 z-0">
@@ -158,13 +181,37 @@ const TechnoPage = () => {
               className="flex gap-4 justify-center lg:justify-start"
               variants={itemVariants}
             >
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold rounded-none neon-glow hover:scale-105 transition-transform duration-300 flex items-center gap-2 font-mono">
+              <motion.button
+                onClick={() => setIsContactModalOpen(true)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold rounded-none shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 font-mono relative overflow-hidden group"
+              >
                 <Volume2 className="w-5 h-5" />
-                ENTER THE UNDERGROUND
-              </button>
-              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-none hover:bg-cyan-400/10 transition-colors duration-300 font-mono">
-                TECHNO SETS
-              </button>
+                <span>ENTER THE UNDERGROUND</span>
+                <motion.div
+                  animate={{
+                    x: [-100, 100, -100],
+                    opacity: [0, 1, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent w-1/3"
+                />
+              </motion.button>
+              <Link href="/discography">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-none hover:bg-cyan-400/10 transition-colors duration-300 font-mono flex items-center gap-2"
+                >
+                  TECHNO SETS
+                  <ExternalLink className="w-4 h-4" />
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -434,10 +481,15 @@ const TechnoPage = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             variants={itemVariants}
           >
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold font-mono neon-glow hover:scale-105 transition-transform duration-300 flex items-center justify-center gap-2">
+            <motion.button
+              onClick={() => setIsContactModalOpen(true)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold font-mono shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2"
+            >
               <Volume2 className="w-5 h-5" />
               BOOK UNDERGROUND SESSION
-            </button>
+            </motion.button>
             <Link
               href="/"
               className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold font-mono hover:bg-cyan-400/10 transition-colors duration-300 inline-flex items-center justify-center gap-2"
