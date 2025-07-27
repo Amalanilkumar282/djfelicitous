@@ -112,7 +112,7 @@ const Footer: React.FC = () => {
                       // For Services section, make clickable to open contact modal
                       <button
                         onClick={() => setShowContactModal(true)}
-                        className="text-text-muted hover:text-electric-cyan transition-colors text-sm block py-1 text-left w-full hover:pl-2 hover:bg-electric-cyan/10 rounded transition-all duration-300"
+                        className="text-text-muted hover:text-electric-cyan text-sm block py-1 text-left w-full hover:pl-2 hover:bg-electric-cyan/10 rounded transition-all duration-300"
                       >
                         {link.name}
                       </button>
