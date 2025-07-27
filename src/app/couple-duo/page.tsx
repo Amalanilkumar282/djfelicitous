@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, Play, Instagram, Calendar, Star, Quote } from 'lucide-react';
+import { Play, Instagram, Calendar, Star, Quote } from 'lucide-react';
 import { FaSoundcloud, FaYoutube } from 'react-icons/fa';
 import { getProfileByRoute } from '@/data/djProfiles';
 import FloatingContactWidget from '../../components/FloatingContactWidget';
