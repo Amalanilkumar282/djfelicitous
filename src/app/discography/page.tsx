@@ -6,10 +6,11 @@ import { Play, Pause, ExternalLink, Calendar, Clock, Heart, Eye } from 'lucide-r
 import { discography, albums } from '../../data/discography';
 import QuickAccessWidget from '../../components/QuickAccessWidget';
 import FloatingContactWidget from '../../components/FloatingContactWidget';
+import SoundCloudPlayer from '../../components/SoundCloudPlayer';
 
 export default function DiscographyPage() {
   const [selectedFilter, setSelectedFilter] = useState<'all' | 'original' | 'remix' | 'live-set' | 'collaboration'>('all');
-  const [playingTrack, setPlayingTrack] = useState<string | null>(null);
+  const [activePlayer, setActivePlayer] = useState<string | null>(null);
 
   const filters = [
     { key: 'all' as const, label: 'All Tracks' },
@@ -23,8 +24,12 @@ export default function DiscographyPage() {
     ? discography 
     : discography.filter(track => track.type === selectedFilter);
 
-  const togglePlay = (trackId: string) => {
-    setPlayingTrack(playingTrack === trackId ? null : trackId);
+  const openPlayer = (trackId: string) => {
+    setActivePlayer(trackId);
+  };
+
+  const closePlayer = () => {
+    setActivePlayer(null);
   };
 
   const formatNumber = (num: number) => {
@@ -246,11 +251,11 @@ export default function DiscographyPage() {
                     <motion.button
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      onClick={() => togglePlay(track.id)}
+                      onClick={() => openPlayer(track.id)}
                       className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     >
                       <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center">
-                        {playingTrack === track.id ? (
+                        {activePlayer === track.id ? (
                           <Pause className="w-8 h-8 text-black" />
                         ) : (
                           <Play className="w-8 h-8 text-black ml-1" />
@@ -323,6 +328,19 @@ export default function DiscographyPage() {
 
                     {/* Streaming Links */}
                     <div className="flex flex-wrap gap-3">
+                      {/* Play Now Button for SoundCloud tracks */}
+                      {track.embedUrl && (
+                        <motion.button
+                          onClick={() => openPlayer(track.id)}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white rounded-lg transition-all duration-300 font-medium shadow-lg"
+                        >
+                          <Play className="w-5 h-5" />
+                          <span>Play Now</span>
+                        </motion.button>
+                      )}
+                      
                       {Object.entries(track.streamingLinks).map(([platform, url]) => (
                         url && (
                           <motion.a
@@ -332,7 +350,11 @@ export default function DiscographyPage() {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="flex items-center space-x-2 px-4 py-2 bg-gray-800 hover:bg-cyan-400 hover:text-black text-gray-300 rounded-lg transition-all duration-300 text-sm font-medium"
+                            className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 text-sm font-medium ${
+                              platform === 'soundcloud' 
+                                ? 'bg-orange-600 hover:bg-orange-700 text-white' 
+                                : 'bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white'
+                            }`}
                           >
                             <ExternalLink className="w-4 h-4" />
                             <span className="capitalize">{platform}</span>
@@ -395,6 +417,15 @@ export default function DiscographyPage() {
             </div>
           </div>
         </section>
+      )}
+      
+      {/* SoundCloud Player Modal */}
+      {activePlayer && (
+        <SoundCloudPlayer
+          track={discography.find(track => track.id === activePlayer)!}
+          isOpen={!!activePlayer}
+          onClose={closePlayer}
+        />
       )}
     </div>
   );
