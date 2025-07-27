@@ -97,14 +97,14 @@ const BollywoodPage = () => {
           {/* Hero Content */}
           <motion.div variants={itemVariants} className="text-center lg:text-left">
             <motion.h1
-              className="text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-executive-teal via-executive-accent to-executive-teal-light bg-clip-text text-transparent"
+              className="text-6xl lg:text-8xl font-bold mb-12 bg-gradient-to-r from-executive-teal via-executive-accent to-executive-teal-light bg-clip-text text-transparent"
               variants={executiveVariants}
               animate="visible"
             >
               DJ FELICITOUS
             </motion.h1>
             <motion.p
-              className="text-2xl lg:text-3xl mb-6 text-executive-slate font-light"
+              className="text-2xl lg:text-3xl mb-10 text-executive-slate font-light"
               variants={itemVariants}
             >
               {profile.subtitle}
@@ -183,7 +183,7 @@ const BollywoodPage = () => {
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-8 text-executive-teal"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-executive-teal section-heading"
             variants={itemVariants}
           >
             About the Artist
@@ -224,7 +224,7 @@ const BollywoodPage = () => {
       >
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-executive-teal"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-center text-executive-teal gallery-heading"
             variants={itemVariants}
           >
             Gallery
@@ -264,7 +264,7 @@ const BollywoodPage = () => {
       >
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-executive-teal"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-center text-executive-teal content-heading"
             variants={itemVariants}
           >
             Recent Shows
@@ -279,7 +279,7 @@ const BollywoodPage = () => {
               >
                 <div className="flex flex-col gap-4">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-pink-300 mb-2">{gig}</h3>
+                    <h3 className="text-2xl font-bold text-pink-300 mb-4">{gig}</h3>
                     <div className="flex flex-wrap gap-4 text-gray-300">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4 text-pink-400" />
@@ -308,7 +308,7 @@ const BollywoodPage = () => {
       >
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-pink-400"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-center text-pink-400 content-heading"
             variants={itemVariants}
           >
             What People Say
@@ -348,7 +348,7 @@ const BollywoodPage = () => {
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-6 text-executive-teal"
+            className="text-4xl lg:text-6xl font-bold mb-12 text-executive-teal"
             variants={itemVariants}
           >
             Ready to Party?

@@ -90,10 +90,10 @@ export default function CoupleduoPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <h1 className="text-5xl md:text-7xl font-black mb-6 text-white">
+            <h1 className="text-5xl md:text-7xl font-black mb-10 text-white">
               {profile.name}
             </h1>
-            <p className="text-2xl md:text-3xl text-executive-silver mb-8 font-light">
+            <p className="text-2xl md:text-3xl text-executive-silver mb-12 font-light">
               {profile.subtitle}
             </p>
             <p className="text-xl text-executive-chrome mb-12 max-w-2xl mx-auto">
@@ -145,7 +145,7 @@ export default function CoupleduoPage() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 neon-pink neon-text">
+              <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-10 neon-pink neon-text section-heading">
                 OUR STORY
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -225,7 +225,7 @@ export default function CoupleduoPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 neon-cyan neon-text">
+            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-10 neon-cyan neon-text content-heading">
               RECENT VENUES & FESTIVALS
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -244,7 +244,7 @@ export default function CoupleduoPage() {
                 className="bg-black/50 backdrop-blur-md border border-neon-pink/30 rounded-lg p-4 text-center min-h-[120px] flex flex-col justify-center"
               >
                 <Calendar className="w-6 h-6 text-neon-pink mx-auto mb-3 flex-shrink-0" />
-                <h3 className="font-medium text-sm mb-2 break-words hyphens-auto leading-snug px-1">{gig}</h3>
+                <h3 className="font-medium text-sm mb-3 break-words hyphens-auto leading-snug px-1">{gig}</h3>
                 <div className="flex items-center justify-center space-x-1 text-yellow-400 flex-shrink-0">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} size={14} fill="currentColor" />
@@ -266,7 +266,7 @@ export default function CoupleduoPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-6 neon-lime neon-text">
+              <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-10 neon-lime neon-text content-heading">
                 WHAT PEOPLE SAY
               </h2>
             </motion.div>

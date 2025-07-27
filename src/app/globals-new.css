@@ -556,6 +556,25 @@
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .section-title { font-size: 2.5rem; }
+  h1 { 
+    font-size: 3rem; 
+    margin-bottom: var(--space-xl); 
+  }
+  h2 { 
+    font-size: 2.5rem; 
+    margin-bottom: var(--space-lg); 
+  }
+  h3 { 
+    font-size: 2rem; 
+    margin-bottom: var(--space-md); 
+  }
+  .gallery-heading,
+  .section-heading {
+    margin-bottom: var(--space-2xl) !important;
+  }
+  .content-heading {
+    margin-bottom: var(--space-xl) !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -566,6 +585,25 @@
   .section-subtitle { font-size: 1.125rem; }
   .hero-content { padding: 0 var(--space-lg); }
   .section-container { padding: 0 var(--space-lg); }
+  h1 { 
+    font-size: 2.5rem; 
+    margin-bottom: var(--space-lg); 
+  }
+  h2 { 
+    font-size: 2rem; 
+    margin-bottom: var(--space-md); 
+  }
+  h3 { 
+    font-size: 1.75rem; 
+    margin-bottom: var(--space-sm); 
+  }
+  .gallery-heading,
+  .section-heading {
+    margin-bottom: var(--space-xl) !important;
+  }
+  .content-heading {
+    margin-bottom: var(--space-lg) !important;
+  }
 }
 
 /* Base Typography and Layout */
@@ -590,14 +628,50 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
+  margin-bottom: var(--space-xl); /* Standard professional spacing */
 }
 
-h1 { font-size: 4rem; font-weight: 700; }
-h2 { font-size: 3rem; font-weight: 600; }
-h3 { font-size: 2.25rem; font-weight: 600; }
-h4 { font-size: 1.875rem; font-weight: 600; }
-h5 { font-size: 1.5rem; font-weight: 500; }
-h6 { font-size: 1.25rem; font-weight: 500; }
+h1 { 
+  font-size: 4rem; 
+  font-weight: 700; 
+  margin-bottom: var(--space-2xl); /* Larger spacing for main headings */
+}
+h2 { 
+  font-size: 3rem; 
+  font-weight: 600; 
+  margin-bottom: var(--space-xl); /* Professional spacing for section headings */
+}
+h3 { 
+  font-size: 2.25rem; 
+  font-weight: 600; 
+  margin-bottom: var(--space-lg); /* Appropriate spacing for sub-headings */
+}
+h4 { 
+  font-size: 1.875rem; 
+  font-weight: 600; 
+  margin-bottom: var(--space-lg);
+}
+h5 { 
+  font-size: 1.5rem; 
+  font-weight: 500; 
+  margin-bottom: var(--space-md);
+}
+h6 { 
+  font-size: 1.25rem; 
+  font-weight: 500; 
+  margin-bottom: var(--space-md);
+}
+
+/* Gallery and section headings should have enhanced spacing */
+.gallery-heading,
+.section-heading {
+  margin-bottom: var(--space-3xl) !important;
+}
+
+/* Content headings that precede galleries or lists */
+.content-heading {
+  margin-bottom: var(--space-2xl) !important;
+}
 
 p {
   margin: 0;

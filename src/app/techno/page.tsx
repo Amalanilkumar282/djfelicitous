@@ -156,7 +156,7 @@ const TechnoPage = () => {
           {/* Hero Content */}
           <motion.div variants={itemVariants} className="text-center lg:text-left">
             <motion.h1
-              className="text-6xl lg:text-8xl font-bold mb-6 text-cyan-400"
+              className="text-6xl lg:text-8xl font-bold mb-12 text-cyan-400"
               variants={technoVariants}
               animate="pulse"
               style={{ fontFamily: 'monospace' }}
@@ -164,7 +164,7 @@ const TechnoPage = () => {
               TNT
             </motion.h1>
             <motion.p
-              className="text-2xl lg:text-3xl mb-6 text-cyan-300 font-light"
+              className="text-2xl lg:text-3xl mb-10 text-cyan-300 font-light"
               variants={itemVariants}
             >
               {profile.subtitle}
@@ -249,7 +249,7 @@ const TechnoPage = () => {
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-8 text-cyan-400 font-mono"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-cyan-400 font-mono section-heading"
             variants={itemVariants}
           >
             THE UNDERGROUND
@@ -290,7 +290,7 @@ const TechnoPage = () => {
       >
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-cyan-400 font-mono"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-center text-cyan-400 font-mono gallery-heading"
             variants={itemVariants}
           >
             UNDERGROUND SESSIONS
@@ -333,7 +333,7 @@ const TechnoPage = () => {
       >
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-cyan-400 font-mono"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-center text-cyan-400 font-mono content-heading"
             variants={itemVariants}
           >
             UNDERGROUND VENUES

@@ -119,7 +119,7 @@ export default function DiscographyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight"
+              className="text-6xl md:text-8xl font-bold text-white mb-12 leading-tight"
             >
               <span className="bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent">
                 Discography
@@ -130,7 +130,7 @@ export default function DiscographyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12"
+              className="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16"
             >
               Explore the complete sonic journey across genres and decades. From underground beats to mainstream hits,
               every track represents a unique moment in musical evolution spanning multiple artist identities.
@@ -184,7 +184,7 @@ export default function DiscographyPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h3 className="text-2xl font-bold text-white mb-4">Filter by Category</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Filter by Category</h3>
             <p className="text-gray-400">Explore tracks by type and discover your favorite style</p>
           </motion.div>
 
@@ -264,7 +264,7 @@ export default function DiscographyPage() {
                   <div className="flex-1 p-6">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                           {track.title}
                         </h3>
                         <p className="text-lg text-gray-400 mb-2">{track.artist}</p>
@@ -376,7 +376,7 @@ export default function DiscographyPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 content-heading">
                 Albums & <span className="text-cyan-400">EPs</span>
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -398,7 +398,7 @@ export default function DiscographyPage() {
                   </div>
                   
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                       {album.title}
                     </h3>
                     <p className="text-gray-400 mb-2">{album.artist}</p>

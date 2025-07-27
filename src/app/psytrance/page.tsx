@@ -118,14 +118,14 @@ const PsytrancePage = () => {
           {/* Hero Content */}
           <motion.div variants={itemVariants} className="text-center lg:text-left">
             <motion.h1
-              className="text-6xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent"
+              className="text-6xl lg:text-8xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent"
               variants={executiveVariants}
               animate="cosmic"
             >
               TINITROCOSMIC
             </motion.h1>
             <motion.p
-              className="text-2xl lg:text-3xl mb-6 text-purple-300 font-light"
+              className="text-2xl lg:text-3xl mb-10 text-purple-300 font-light"
               variants={itemVariants}
             >
               {profile.subtitle}
@@ -213,7 +213,7 @@ const PsytrancePage = () => {
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-8 text-purple-400"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-purple-400 section-heading"
             variants={itemVariants}
           >
             The Cosmic Journey
@@ -254,7 +254,7 @@ const PsytrancePage = () => {
       >
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-purple-400"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-center text-purple-400 gallery-heading"
             variants={itemVariants}
           >
             Visual Journey
@@ -297,7 +297,7 @@ const PsytrancePage = () => {
       >
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-purple-400"
+            className="text-4xl lg:text-6xl font-bold mb-20 text-center text-purple-400 content-heading"
             variants={itemVariants}
           >
             Festival Dimensions
@@ -312,7 +312,7 @@ const PsytrancePage = () => {
               >
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-purple-300 mb-2">{gig}</h3>
+                    <h3 className="text-2xl font-bold text-purple-300 mb-4">{gig}</h3>
                     <div className="flex flex-wrap gap-4 text-gray-300">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4 text-purple-400" />
@@ -341,7 +341,7 @@ const PsytrancePage = () => {
       >
         <div className="max-w-6xl mx-auto">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-12 text-center text-purple-400"
+            className="text-4xl lg:text-6xl font-bold mb-16 text-center text-purple-400"
             variants={itemVariants}
           >
             Cosmic Testimonials
@@ -424,7 +424,7 @@ const PsytrancePage = () => {
       >
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
-            className="text-4xl lg:text-6xl font-bold mb-6 text-purple-400"
+            className="text-4xl lg:text-6xl font-bold mb-12 text-purple-400"
             variants={itemVariants}
           >
             Ready for Transcendence?
