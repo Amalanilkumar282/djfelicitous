@@ -100,28 +100,37 @@ export default function CoupleduoPage() {
               {profile.description}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <motion.button
+                onClick={() => setIsContactModalOpen(true)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-white font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 relative overflow-hidden group w-auto"
+              >
+                <span className="relative z-10">BOOK THE DUO</span>
+                <motion.div
+                  initial={{ x: '-100%' }}
+                  animate={{ x: '100%' }}
+                  transition={{ 
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "linear"
+                  }}
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                />
+              </motion.button>
+              
               <Link href="/discography">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-executive-teal to-executive-teal-dark text-white font-bold text-lg px-8 py-4 rounded-lg shadow-executive-medium hover:shadow-executive-glow transition-all"
+                  className="px-8 py-4 border-2 border-pink-500 text-pink-500 font-bold rounded-lg hover:bg-pink-500/10 transition-colors duration-300 flex items-center gap-2 w-auto"
                 >
-                  <span className="flex items-center space-x-2">
-                    <Play size={20} />
-                    <span>LISTEN TO OUR SETS</span>
-                  </span>
+                  <Play size={20} />
+                  <span>LISTEN TO OUR SETS</span>
                 </motion.button>
               </Link>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setIsContactModalOpen(true)}
-                className="border-2 border-executive-teal text-executive-teal font-bold text-lg px-8 py-4 rounded-lg hover:bg-executive-teal/10 transition-all shadow-executive-subtle"
-              >
-                BOOK THE DUO
-              </motion.button>
             </div>
           </motion.div>
         </div>
