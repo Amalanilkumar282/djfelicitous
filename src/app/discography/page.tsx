@@ -96,46 +96,47 @@ export default function DiscographyPage() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center space-x-4 mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              <div className="w-4 h-4 bg-cyan-400 rounded-full animate-pulse"></div>
-              <span className="text-cyan-400 font-semibold text-lg tracking-widest uppercase">
-                Complete Musical Archive
-              </span>
-              <div className="w-4 h-4 bg-cyan-400 rounded-full animate-pulse"></div>
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-flex items-center space-x-4 mb-8"
+              >
+                <div className="w-4 h-4 bg-cyan-400 rounded-full animate-pulse"></div>
+                <span className="text-cyan-400 font-semibold text-lg tracking-widest uppercase">
+                  Complete Musical Archive
+                </span>
+                <div className="w-4 h-4 bg-cyan-400 rounded-full animate-pulse"></div>
+              </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="font-orbitron text-3xl md:text-5xl font-bold mb-6 leading-tight"
+              >
+                <span className="bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent">
+                  Discography
+                </span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-xl text-gray-300 leading-relaxed mb-8"
+              >
+                Explore the complete sonic journey across genres and decades. From underground beats to mainstream hits,
+                every track represents a unique moment in musical evolution spanning multiple artist identities.
+              </motion.p>
             </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-6xl md:text-8xl font-bold text-white mb-12 leading-tight"
-            >
-              <span className="bg-gradient-to-r from-white via-cyan-200 to-cyan-400 bg-clip-text text-transparent">
-                Discography
-              </span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-16"
-            >
-              Explore the complete sonic journey across genres and decades. From underground beats to mainstream hits,
-              every track represents a unique moment in musical evolution spanning multiple artist identities.
-            </motion.p>
-          </motion.div>
+          </div>
 
           {/* Enhanced Stats */}
           <motion.div
@@ -261,9 +262,9 @@ export default function DiscographyPage() {
                   </div>
 
                   {/* Track Info */}
-                  <div className="flex-1 p-6">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                      <div>
+                  <div className="flex-1 p-6 text-center">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-center mb-4">
+                      <div className="text-center md:text-left md:flex-1">
                         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                           {track.title}
                         </h3>
@@ -275,19 +276,19 @@ export default function DiscographyPage() {
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
-                          className="px-3 py-1 bg-gradient-to-r from-cyan-400 to-blue-500 text-black text-sm font-bold rounded-full self-start md:self-auto mt-2 md:mt-0"
+                          className="px-3 py-1 bg-gradient-to-r from-cyan-400 to-blue-500 text-black text-sm font-bold rounded-full mx-auto md:mx-0 mt-2 md:mt-0"
                         >
                           FEATURED
                         </motion.div>
                       )}
                     </div>
 
-                    <p className="text-gray-300 mb-4 leading-relaxed">
+                    <p className="text-gray-300 mb-4 leading-relaxed text-center">
                       {track.description}
                     </p>
 
                     {/* Track Details */}
-                    <div className="flex flex-wrap gap-6 mb-4 text-sm text-gray-400">
+                    <div className="flex flex-wrap gap-6 mb-4 text-sm text-gray-400 justify-center md:justify-start">
                       <div className="flex items-center space-x-2">
                         <Calendar className="w-4 h-4" />
                         <span>{track.releaseDate}</span>
@@ -311,7 +312,7 @@ export default function DiscographyPage() {
                     </div>
 
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-4 justify-center md:justify-start">
                       {track.tags.map((tag) => (
                         <span
                           key={tag}
@@ -323,7 +324,7 @@ export default function DiscographyPage() {
                     </div>
 
                     {/* Streaming Links */}
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                       {/* Play Now Button for SoundCloud tracks */}
                       {track.embedUrl && (
                         <motion.button

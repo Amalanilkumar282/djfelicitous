@@ -100,27 +100,28 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <h2 className="section-title text-5xl md:text-6xl">
-              Musical <span className="text-accent bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent">Archive</span>
-            </h2>
-            <p className="section-subtitle text-xl mt-6 max-w-3xl mx-auto">
-              Discover the complete collection of original productions, reimagined classics, and exclusive collaborations
-            </p>
-            
-            {/* Decorative divider */}
+          <div className="max-w-4xl mx-auto text-center mb-20">
             <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: '200px' }}
-              transition={{ duration: 1.2, delay: 0.5 }}
-              className="h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-8"
-            />
-          </motion.div>
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="section-title text-3xl md:text-5xl">
+                Musical <span className="text-accent bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent">Archive</span>
+              </h2>
+              <p className="section-subtitle text-xl mt-6 mb-8">
+                Discover the complete collection of original productions, reimagined classics, and exclusive collaborations
+              </p>
+              
+              {/* Decorative divider */}
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: '200px' }}
+                transition={{ duration: 1.2, delay: 0.5 }}
+                className="h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-8"
+              />
+            </motion.div>
+          </div>
 
           <DiscographyCard />
         </div>
@@ -128,7 +129,7 @@ export default function Home() {
 
       {/* Combined Call to Action Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}

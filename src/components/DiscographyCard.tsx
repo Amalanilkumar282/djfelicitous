@@ -58,25 +58,25 @@ export default function DiscographyCard({ className = '' }: DiscographyCardProps
           </div>
 
           <div className="relative p-6 sm:p-8 md:p-12 lg:p-16">
-            <div className="max-w-3xl">
+            <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="flex items-center space-x-2 sm:space-x-4 mb-4 sm:mb-6 md:mb-8"
+                className="flex items-center justify-center space-x-2 sm:space-x-4 mb-6"
               >
                 <div className="w-2 h-2 sm:w-3 sm:h-3 bg-cyan-400 rounded-full animate-pulse"></div>
                 <span className="text-cyan-400 font-semibold text-xs sm:text-sm md:text-base tracking-wider uppercase">
                   Complete Musical Archive
                 </span>
-                <div className="flex-1 h-px bg-gradient-to-r from-cyan-400/50 to-transparent"></div>
+                <div className="flex-1 h-px bg-gradient-to-r from-cyan-400/50 to-transparent max-w-24"></div>
               </motion.div>
 
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 group-hover:text-cyan-400 transition-colors duration-500 leading-tight"
+                className="font-orbitron text-3xl md:text-5xl font-bold text-white mb-6 group-hover:text-cyan-400 transition-colors duration-500 leading-tight"
               >
                 Discography
               </motion.h2>
@@ -85,7 +85,7 @@ export default function DiscographyCard({ className = '' }: DiscographyCardProps
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-300 mb-6 sm:mb-8 md:mb-10 leading-relaxed max-w-2xl"
+                className="text-xl text-gray-300 mb-8 leading-relaxed"
               >
                 Journey through the complete sonic universe - from chart-topping Bollywood reimaginings 
                 to underground techno masterpieces and psychedelic odysseys. Every beat tells a story.
@@ -95,7 +95,7 @@ export default function DiscographyCard({ className = '' }: DiscographyCardProps
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-10"
+                className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 mb-8 justify-center"
               >
                 {['Original Tracks', 'Remixes', 'Live Sets', 'Collaborations'].map((tag, index) => (
                   <motion.span
@@ -114,7 +114,7 @@ export default function DiscographyCard({ className = '' }: DiscographyCardProps
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 }}
-                className="flex items-center space-x-2 sm:space-x-4 text-cyan-400 group-hover:text-white transition-colors duration-300"
+                className="flex items-center justify-center space-x-2 sm:space-x-4 text-cyan-400 group-hover:text-white transition-colors duration-300"
               >
                 <span className="font-bold text-sm sm:text-base md:text-lg">Explore Full Collection</span>
                 <motion.div

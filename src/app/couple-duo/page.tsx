@@ -219,19 +219,20 @@ export default function CoupleduoPage() {
       {/* Gigs Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-orbitron text-3xl md:text-4xl font-bold mb-10 neon-cyan neon-text content-heading">
-              RECENT VENUES & FESTIVALS
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From intimate venues to massive festivals, we&apos;ve brought our unique energy to stages worldwide
-            </p>
-          </motion.div>
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="font-orbitron text-3xl md:text-5xl font-bold mb-6 neon-cyan neon-text">
+                RECENT VENUES & FESTIVALS
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                From intimate venues to massive festivals, we&apos;ve brought our unique energy to stages worldwide
+              </p>
+            </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {profile.gigs.map((gig, index) => (
