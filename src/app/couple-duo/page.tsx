@@ -44,7 +44,7 @@ export default function CoupleduoPage() {
         {/* Background */}
         <div className="absolute inset-0">
           <Image
-            src="/images/couple-duo.jpg"
+            src="/images/couple-duo-hero.jpg"
             alt={profile.name}
             fill
             className="object-cover"
