@@ -57,7 +57,7 @@ export const discography: Track[] = [
     description: 'A mesmerizing fusion of Bollywood classics with deep Afro House rhythms and melodic progressions. This extended mix takes listeners on a cultural journey through infectious beats and soulful melodies, perfect for both intimate gatherings and dancefloor euphoria.',
     featured: true,
     type: 'remix',
-    tags: ['Bollywood', 'Afro House', 'Melodic', 'Cultural Fusion', 'Deep House'],
+    tags: ['Bollywood', 'Afro House', 'Melodic', 'Cultural Fusion'],
     plays: 185000,
     likes: 12800,
     soundcloudTrackId: '2072437752',
