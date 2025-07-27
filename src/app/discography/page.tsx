@@ -368,53 +368,100 @@ export default function DiscographyPage() {
       </section>
 
       {/* Albums Section */}
-      {albums.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 content-heading">
-                Albums & <span className="text-cyan-400">EPs</span>
-              </h2>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Complete collections showcasing artistic evolution and thematic coherence
-              </p>
-            </motion.div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 content-heading">
+              Albums & <span className="text-cyan-400">EPs</span>
+            </h2>
+          </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {albums.map((album, index) => (
+          {/* Coming Soon Message */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center py-20"
+          >
+            <div className="relative max-w-2xl mx-auto">
+              {/* Background Effects */}
+              <div className="absolute inset-0 opacity-20 overflow-hidden">
+                <div className="absolute top-4 left-4 w-20 h-20 bg-cyan-400/30 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute bottom-4 right-4 w-24 h-24 bg-blue-400/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+              </div>
+
+              {/* Content */}
+              <div className="relative z-10 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl p-12 border border-gray-700">
                 <motion.div
-                  key={album.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 overflow-hidden group"
+                  animate={{ 
+                    scale: [1, 1.05, 1],
+                    rotate: [0, 2, -2, 0]
+                  }}
+                  transition={{ 
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="text-6xl mb-8"
                 >
-                  <div className="aspect-square bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
-                    <div className="text-6xl text-gray-400">♫</div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                      {album.title}
-                    </h3>
-                    <p className="text-gray-400 mb-2">{album.artist}</p>
-                    <p className="text-cyan-400 text-sm font-medium mb-3">{album.type.toUpperCase()}</p>
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                      {album.description}
-                    </p>
-                    <p className="text-gray-500 text-sm">{album.tracks.length} tracks • {album.releaseDate}</p>
-                  </div>
+                  🎵
                 </motion.div>
-              ))}
+
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="text-3xl md:text-4xl font-bold mb-6"
+                >
+                  <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Coming Soon...
+                  </span>
+                </motion.h3>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  className="text-xl text-gray-300 mb-8 leading-relaxed"
+                >
+                  Curated collections and exclusive albums are in the works. 
+                  <br />
+                  <span className="text-cyan-400 font-medium">Stay tuned for something extraordinary!</span>
+                </motion.p>
+
+                {/* Animated dots */}
+                <motion.div
+                  className="flex justify-center space-x-2"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                >
+                  {[0, 1, 2].map((i) => (
+                    <motion.div
+                      key={i}
+                      className="w-3 h-3 bg-cyan-400 rounded-full"
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        opacity: [0.5, 1, 0.5]
+                      }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        delay: i * 0.2
+                      }}
+                    />
+                  ))}
+                </motion.div>
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </motion.div>
+        </div>
+      </section>
       
       {/* SoundCloud Player Modal */}
       {activePlayer && (

@@ -86,25 +86,7 @@ export const discography: Track[] = [
   }
 ];
 
-export const albums: Album[] = [
-  {
-    id: 'felicitous-collection',
-    title: 'The Felicitous Collection',
-    artist: 'DJ Felicitous',
-    genre: 'Multi-Genre',
-    releaseDate: '2024-12-10',
-    albumArt: '/images/albums/felicitous-collection.jpg',
-    description: 'A curated collection showcasing the diverse musical journey of DJ Felicitous. From melodic Afro-Bollywood fusion to deep techno progressions, this album represents the evolution of a multi-genre artist who refuses to be confined by boundaries.',
-    tracks: [
-      discography.find(track => track.id === 'melodic-afro-bolly-house-mix')!,
-      discography.find(track => track.id === 'technoverse-volume-i')!
-    ].filter(Boolean),
-    streamingLinks: {
-      soundcloud: 'https://soundcloud.com/dj_felicitous'
-    },
-    type: 'compilation'
-  }
-];
+export const albums: Album[] = [];
 
 export const getFeaturedTracks = () => discography.filter(track => track.featured);
 export const getTracksByArtist = (artist: string) => discography.filter(track => track.artist.includes(artist));
