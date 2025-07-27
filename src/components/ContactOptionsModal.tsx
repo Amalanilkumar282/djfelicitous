@@ -1,16 +1,15 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, MessageCircle, Clock, Calendar, X, Zap } from 'lucide-react';
+import { Phone, MessageCircle, Clock, X, Zap } from 'lucide-react';
 import { useState } from 'react';
 
 interface ContactOptionsModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onBookingFormOpen: () => void;
 }
 
-export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen }: ContactOptionsModalProps) {
+export default function ContactOptionsModal({ isOpen, onClose }: ContactOptionsModalProps) {
   const contactNumber = "+919847352182";
   const [hoveredOption, setHoveredOption] = useState<string | null>(null);
 
@@ -41,21 +40,6 @@ export default function ContactOptionsModal({ isOpen, onClose, onBookingFormOpen
       hoverGradient: 'from-emerald-300 to-teal-400',
       bgPattern: 'bg-emerald-500/10',
       delay: 0.2
-    },
-    {
-      id: 'form',
-      title: 'Booking Form',
-      subtitle: 'Detailed Request',
-      description: 'Complete booking form for comprehensive event planning',
-      icon: Calendar,
-      action: () => {
-        onClose();
-        onBookingFormOpen();
-      },
-      gradient: 'from-cyan-400 to-blue-500',
-      hoverGradient: 'from-cyan-300 to-blue-400',
-      bgPattern: 'bg-cyan-500/10',
-      delay: 0.3
     }
   ];
 

@@ -214,10 +214,6 @@ const Navbar: React.FC = () => {
     <ContactOptionsModal 
       isOpen={showContactModal} 
       onClose={() => setShowContactModal(false)}
-      onBookingFormOpen={() => {
-        setShowContactModal(false);
-        setShowBookingModal(true);
-      }}
     />
     
     {/* Booking Modal */}

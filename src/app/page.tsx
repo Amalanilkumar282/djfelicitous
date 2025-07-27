@@ -43,7 +43,6 @@ export default function Home() {
       <ContactOptionsModal 
         isOpen={showContactModal} 
         onClose={() => setShowContactModal(false)}
-        onBookingFormOpen={() => setShowBookingModal(true)}
       />
       
       {/* Booking Modal */}

@@ -56,10 +56,6 @@ const BollywoodPage = () => {
       <ContactOptionsModal
         isOpen={isContactModalOpen}
         onClose={() => setIsContactModalOpen(false)}
-        onBookingFormOpen={() => {
-          setIsContactModalOpen(false);
-          setIsBookingModalOpen(true);
-        }}
       />
 
       {/* Booking Modal */}
