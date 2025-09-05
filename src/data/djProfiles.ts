@@ -139,7 +139,7 @@ export const djProfiles: DJProfile[] = [
     name: 'TinitroCosmic',
     subtitle: 'Psychedelic Journey Guide',
     description: 'Transcend reality through hypnotic beats and otherworldly soundscapes.',
-    genre: 'Psy Trance / Progressive',
+    genre: 'Psytrance',
     image: '/images/psytrance.jpg',
     color: 'neon-purple',
     route: '/psytrance',

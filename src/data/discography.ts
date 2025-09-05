@@ -59,7 +59,9 @@ export const discography: Track[] = [
     description: 'An original 180 BPM psytrance production exploring the awakening of the third eye consciousness.',
     featured: true,
     type: 'original',
-    tags: ['Psytrance', 'Original', '180BPM', 'Spiritual', 'Awakening']
+    tags: ['Psytrance', 'Original', '180BPM', 'Spiritual', 'Awakening'],
+    plays: 2850,
+    likes: 245
   },
 
   // REMIXES
@@ -79,7 +81,9 @@ export const discography: Track[] = [
     description: 'A melodic remix of classical poetry transformed into electronic soundscapes.',
     featured: false,
     type: 'remix',
-    tags: ['Melodic', 'Remix', 'Poetry', 'Classical']
+    tags: ['Melodic', 'Remix', 'Poetry', 'Classical'],
+    plays: 1650,
+    likes: 128
   },
   {
     id: 'neeye-melodic-remix-2025',
@@ -97,7 +101,9 @@ export const discography: Track[] = [
     description: 'A modern melodic remix bringing contemporary electronic elements to traditional melodies.',
     featured: true,
     type: 'remix',
-    tags: ['Melodic', 'Remix', 'Contemporary', 'Traditional']
+    tags: ['Melodic', 'Remix', 'Contemporary', 'Traditional'],
+    plays: 3420,
+    likes: 289
   },
   {
     id: 'cosmic-tatvamasi',
@@ -115,7 +121,9 @@ export const discography: Track[] = [
     description: 'A cosmic interpretation of ancient philosophical concepts through electronic music.',
     featured: false,
     type: 'remix',
-    tags: ['Cosmic', 'Remix', 'Philosophy', 'Spiritual']
+    tags: ['Cosmic', 'Remix', 'Philosophy', 'Spiritual'],
+    plays: 2180,
+    likes: 156
   },
   {
     id: 'cosmic-violin-2023',
@@ -133,7 +141,9 @@ export const discography: Track[] = [
     description: 'A cosmic remix featuring ethereal violin melodies blended with electronic textures.',
     featured: false,
     type: 'remix',
-    tags: ['Cosmic', 'Remix', 'Violin', 'Ethereal']
+    tags: ['Cosmic', 'Remix', 'Violin', 'Ethereal'],
+    plays: 1890,
+    likes: 142
   },
   {
     id: 'soul-seeker-210bpm',
@@ -151,7 +161,9 @@ export const discography: Track[] = [
     description: 'A high-energy 210 BPM remix exploring the depths of consciousness and soul searching.',
     featured: false,
     type: 'remix',
-    tags: ['Hi-Tech', 'Remix', '210BPM', 'Soul', 'Consciousness']
+    tags: ['Hi-Tech', 'Remix', '210BPM', 'Soul', 'Consciousness'],
+    plays: 2650,
+    likes: 198
   },
   {
     id: 'cosmic-thillana-2023',
@@ -169,7 +181,9 @@ export const discography: Track[] = [
     description: 'A special hi-tech remix of classical Thillana compositions with cosmic electronic elements.',
     featured: false,
     type: 'remix',
-    tags: ['Hi-Tech', 'Remix', 'Classical', 'Thillana', 'Special Mix']
+    tags: ['Hi-Tech', 'Remix', 'Classical', 'Thillana', 'Special Mix'],
+    plays: 1750,
+    likes: 134
   },
   {
     id: 'silence-and-solitude',
@@ -187,7 +201,9 @@ export const discography: Track[] = [
     description: 'An ambient remix exploring themes of introspection, silence, and peaceful solitude.',
     featured: false,
     type: 'remix',
-    tags: ['Ambient', 'Remix', 'Introspective', 'Peaceful']
+    tags: ['Ambient', 'Remix', 'Introspective', 'Peaceful'],
+    plays: 1420,
+    likes: 98
   },
   {
     id: 'depth-of-love-190bpm',
@@ -205,7 +221,9 @@ export const discography: Track[] = [
     description: 'A deeply emotional 190 BPM remix exploring the profound depths of love and connection.',
     featured: false,
     type: 'remix',
-    tags: ['Emotional', 'Remix', '190BPM', 'Love', 'Deep']
+    tags: ['Emotional', 'Remix', '190BPM', 'Love', 'Deep'],
+    plays: 2340,
+    likes: 187
   },
   {
     id: 'adharam-madhuram-melodic-remix',
@@ -223,7 +241,9 @@ export const discography: Track[] = [
     description: 'A melodic remix of the classical devotional piece Adharam Madhuram with modern electronic elements.',
     featured: false,
     type: 'remix',
-    tags: ['Classical', 'Remix', 'Devotional', 'Melodic']
+    tags: ['Classical', 'Remix', 'Devotional', 'Melodic'],
+    plays: 1980,
+    likes: 165
   },
   {
     id: 'onappattin-thalam-thullum-remix',
@@ -241,7 +261,9 @@ export const discography: Track[] = [
     description: 'A vibrant remix of the traditional Kerala festival song with modern electronic beats.',
     featured: false,
     type: 'remix',
-    tags: ['Traditional', 'Remix', 'Kerala', 'Festival', 'Electronic']
+    tags: ['Traditional', 'Remix', 'Kerala', 'Festival', 'Electronic'],
+    plays: 1560,
+    likes: 112
   },
 
   // LIVE SETS
@@ -261,7 +283,9 @@ export const discography: Track[] = [
     description: 'A high-energy non-stop commercial sing-along mix by DJ Felicitous, perfect for parties and celebrations.',
     featured: true,
     type: 'live-set',
-    tags: ['Commercial', 'Bollywood', 'Party', 'Non Stop', 'Live Set']
+    tags: ['Commercial', 'Bollywood', 'Party', 'Non Stop', 'Live Set'],
+    plays: 4850,
+    likes: 412
   },
   {
     id: 'melodic-afro-bolly-house-mix',
@@ -279,7 +303,9 @@ export const discography: Track[] = [
     description: 'A mesmerizing fusion of Bollywood classics with deep Afro House rhythms and melodic progressions.',
     featured: true,
     type: 'live-set',
-    tags: ['Bollywood', 'Afro House', 'Melodic', 'Cultural Fusion', 'Live Set']
+    tags: ['Bollywood', 'Afro House', 'Melodic', 'Cultural Fusion', 'Live Set'],
+    plays: 3950,
+    likes: 325
   },
   {
     id: 'melodic-techno-1-hour-non-stop-mix',
@@ -297,7 +323,9 @@ export const discography: Track[] = [
     description: 'A seamless 1-hour melodic techno journey by DJ Felicitous, blending deep grooves and uplifting melodies.',
     featured: false,
     type: 'live-set',
-    tags: ['Melodic Techno', 'Non Stop', 'Mix', 'Live Set']
+    tags: ['Melodic Techno', 'Non Stop', 'Mix', 'Live Set'],
+    plays: 2780,
+    likes: 234
   },
   {
     id: 'technoverse-volume-i-2024',
@@ -315,7 +343,9 @@ export const discography: Track[] = [
     description: 'An immersive journey through melodic techno soundscapes with hypnotic basslines and atmospheric pads.',
     featured: false,
     type: 'live-set',
-    tags: ['Melodic Techno', 'Progressive', 'Atmospheric', 'Live Set']
+    tags: ['Melodic Techno', 'Progressive', 'Atmospheric', 'Live Set'],
+    plays: 3120,
+    likes: 267
   },
   {
     id: 'heart-beat-universe-hitech-mix',
@@ -333,7 +363,9 @@ export const discography: Track[] = [
     description: 'A high-energy 190BPM hi-tech psytrance mini mix exploring the cosmic rhythms of the universe.',
     featured: false,
     type: 'live-set',
-    tags: ['Hi-Tech', 'Psytrance', '190BPM', 'Cosmic', 'Live Set']
+    tags: ['Hi-Tech', 'Psytrance', '190BPM', 'Cosmic', 'Live Set'],
+    plays: 2460,
+    likes: 198
   },
   {
     id: 'ohm-hreem-namaha-live-set',
@@ -351,7 +383,9 @@ export const discography: Track[] = [
     description: 'A spiritual electronic journey combining ancient mantras with modern electronic beats.',
     featured: false,
     type: 'live-set',
-    tags: ['Spiritual', 'Electronic', 'Mantra', 'Live Set']
+    tags: ['Spiritual', 'Electronic', 'Mantra', 'Live Set'],
+    plays: 1890,
+    likes: 145
   },
   {
     id: 'old-is-gold-trinitrocosmic',
@@ -369,7 +403,9 @@ export const discography: Track[] = [
     description: 'A nostalgic journey through classic tracks with a modern electronic twist.',
     featured: false,
     type: 'live-set',
-    tags: ['Classic', 'Electronic', 'Nostalgic', 'Live Set']
+    tags: ['Classic', 'Electronic', 'Nostalgic', 'Live Set'],
+    plays: 1650,
+    likes: 124
   },
   {
     id: 'cosmic-celestial-2021',
@@ -387,7 +423,9 @@ export const discography: Track[] = [
     description: 'A celestial journey through cosmic soundscapes and ethereal electronic compositions.',
     featured: false,
     type: 'live-set',
-    tags: ['Cosmic', 'Electronic', 'Celestial', 'Live Set']
+    tags: ['Cosmic', 'Electronic', 'Celestial', 'Live Set'],
+    plays: 2340,
+    likes: 176
   }
 ];
 
