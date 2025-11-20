@@ -104,7 +104,7 @@ const HeroSection: React.FC = () => {
               {/* Profile image container */}
               <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
-                  src="/images/profile.jpg"
+                  src="/images/profile.png"
                   alt="DJ Felicitous"
                   fill
                   className="object-cover rounded-full mix-blend-normal"
