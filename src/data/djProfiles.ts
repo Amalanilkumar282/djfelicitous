@@ -136,7 +136,7 @@ export const djProfiles: DJProfile[] = [
   },
   {
     id: 'psytrance',
-    name: 'TinitroCosmic',
+    name: 'Trinitrocosmic',
     subtitle: 'Psychedelic Journey Guide',
     description: 'Transcend reality through hypnotic beats and otherworldly soundscapes.',
     genre: 'Psytrance',
@@ -161,7 +161,7 @@ export const djProfiles: DJProfile[] = [
     playlists: [
       {
         name: 'Cosmic Voyager',
-        url: 'https://soundcloud.com/tinitrocosmic/cosmic-voyager',
+        url: 'https://soundcloud.com/trinitrocosmic/cosmic-voyager',
         platform: 'SoundCloud'
       },
       {
@@ -173,7 +173,7 @@ export const djProfiles: DJProfile[] = [
     testimonials: [
       {
         name: 'Rahul Agarwal',
-        text: 'TinitroCosmic took us on an incredible psychedelic journey! Perfect for our meditation retreat after-party.',
+        text: 'Trinitrocosmic took us on an incredible psychedelic journey! Perfect for our meditation retreat after-party.',
         venue: 'Private Retreat Celebration'
       },
       {

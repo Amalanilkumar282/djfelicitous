@@ -64,7 +64,7 @@ const PsytrancePage = () => {
       <BookingModal
         isOpen={isBookingModalOpen}
         onClose={() => setIsBookingModalOpen(false)}
-        djName="TinitroCosmic"
+        djName="Trinitrocosmic"
         djGenre="Psytrance"
       />
 
@@ -118,7 +118,7 @@ const PsytrancePage = () => {
               variants={executiveVariants}
               animate="cosmic"
             >
-              TINITROCOSMIC
+              TRINITROCOSMIC
             </motion.h1>
             <motion.p
               className="text-2xl lg:text-3xl mb-10 text-purple-300 font-light"
@@ -190,7 +190,7 @@ const PsytrancePage = () => {
               />
               <Image
                 src={placeholderImages.psytrance}
-                alt="TinitroCosmic"
+                alt="Trinitrocosmic"
                 fill
                 className="rounded-full border-4 border-purple-400/50 object-cover relative z-10"
               />
@@ -374,7 +374,7 @@ const PsytrancePage = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">&quot;A transcendental journey through sound and space. TinitroCosmic takes you beyond reality.&quot;</p>
+                  <p className="text-gray-300 mb-4 italic">&quot;A transcendental journey through sound and space. Trinitrocosmic takes you beyond reality.&quot;</p>
                   <div className="text-purple-300 font-semibold">- Festival Attendee</div>
                   <div className="text-gray-400 text-sm">Boom Festival</div>
                 </motion.div>
@@ -400,7 +400,7 @@ const PsytrancePage = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">&quot;TinitroCosmic doesn&apos;t just play music, they open portals to other dimensions.&quot;</p>
+                  <p className="text-gray-300 mb-4 italic">&quot;Trinitrocosmic doesn&apos;t just play music, they open portals to other dimensions.&quot;</p>
                   <div className="text-purple-300 font-semibold">- Spiritual Seeker</div>
                   <div className="text-gray-400 text-sm">Rainbow Serpent</div>
                 </motion.div>
@@ -429,7 +429,7 @@ const PsytrancePage = () => {
             className="text-xl text-gray-300 mb-8"
             variants={itemVariants}
           >
-            Join TinitroCosmic on a journey beyond the physical realm. Experience the cosmic consciousness through sound.
+            Join Trinitrocosmic on a journey beyond the physical realm. Experience the cosmic consciousness through sound.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"

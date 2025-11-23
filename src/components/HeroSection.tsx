@@ -164,7 +164,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg sm:text-xl text-gray-100 mb-12 font-light max-w-4xl mx-auto leading-relaxed text-center drop-shadow-md"
         >
-          An elite genre-fluid DJ and music producer based in Bangalore, crafting immersive sonic experiences that transcend boundaries. With over a decade of professional expertise, DJ Felicitous delivers masterfully curated sets spanning Bollywood, South Indian anthems, Techno, Deep House, Progressive House, and Psytrance. From premium corporate events and luxury weddings to pulsating club nights and underground festivals, each performance is a meticulously crafted journey through sound, energy, and emotion.
+          An elite genre-fluid DJ and music producer based in Bangalore since 2015, crafting immersive sonic experiences that transcend boundaries. With over a decade of professional expertise, DJ Felicitous delivers masterfully curated sets spanning Bollywood, South Indian anthems, Techno, Deep House, Progressive House, and Psytrance. From premium corporate events and luxury weddings to pulsating club nights and underground festivals, each performance is a meticulously crafted journey through sound, energy, and emotion.
         </motion.p>
 
         {/* Genre Tags */}

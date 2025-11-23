@@ -12,7 +12,7 @@ Visit the website at: **http://localhost:3001** (during development)
 
 - **Couple Duo**: DJ Felicitous & DJ Geetz - Dynamic duo performances
 - **Bollywood**: DJ Felicitous - Vibrant Bollywood and commercial hits
-- **Psy Trance**: TinitroCosmic - Psychedelic journey through cosmic soundscapes
+- **Psy Trance**: Trinitrocosmic - Psychedelic journey through cosmic soundscapes
 - **Techno**: TNT - Underground techno experiences
 
 ### 🎨 Design Features
